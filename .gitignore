@@ -36,3 +36,5 @@ coverage/
 **/service-account.json
 **/*.pem
 **/*.key
+
+.vercel
