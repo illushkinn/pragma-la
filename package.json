@@ -1,0 +1,12 @@
+{
+  "name": "pragma",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pragma — infraestructura de software médico privada, auditable y soberana",
+  "scripts": {
+    "dev": "echo 'Frontend framework TBD — ver specs/'",
+    "build": "echo 'Frontend framework TBD — ver specs/'",
+    "start": "echo 'Frontend framework TBD — ver specs/'",
+    "vercel-build": "echo 'Static placeholder'"
+  }
+}
