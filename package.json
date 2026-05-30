@@ -3,10 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "description": "Pragma — infraestructura de software médico privada, auditable y soberana",
+  "type": "module",
   "scripts": {
-    "dev": "echo 'Frontend framework TBD — ver specs/'",
-    "build": "echo 'Frontend framework TBD — ver specs/'",
-    "start": "echo 'Frontend framework TBD — ver specs/'",
-    "vercel-build": "echo 'Static placeholder'"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "vercel-build": "astro build"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^6.4.2"
   }
 }

@@ -1,60 +1,44 @@
 # Pragma
 
-**Infraestructura de software médico privada, auditable y soberana.**  
-El médico hace de médico. El sistema hace el resto.
+**Software médico para centros de salud en Argentina.**  
+Turnos, recordatorios, pantallas en sala de espera y seguimiento de pacientes.  
+Sin complicaciones, sin perder la cercanía.
 
-Construimos el sistema operativo digital para centros de salud en LATAM, arrancando por Oberá, Misiones.
+## ¿Qué resuelve?
 
-## Stack
+Los centros de salud pierden pacientes y tiempo porque operan con procesos manuales:
+- El 20% de los pacientes no se presenta al turno
+- Los que vienen una vez, no vuelven
+- La secretaria se pasa el día llamando para confirmar
+
+Pragma automatiza todo eso. El médico hace de médico; el sistema hace el resto.
+
+## ¿Cómo funciona?
+
+1. **Te mostramos** cómo queda tu centro con Pragma (demo de 20 min)
+2. **Lo configuramos** por vos: WhatsApp profesional, agenda conectada, todo listo
+3. **Empezás a notar** la diferencia: menos ausencias, pacientes que vuelven, tiempo libre
+
+## Para quién es
+
+Odontólogos, dermatólogos, clínicas, oftalmólogos, kinesiólogos, veterinarios.
+Si atendés pacientes y querés que tu centro funcione solo, Pragma es para vos.
+
+## Stack técnico
 
 | Capa | Tecnología |
 |------|-----------|
-| Frontend | A definir por feature — SSG/SSR según caso |
-| Backend | Supabase (RLS, región EU) + n8n + vLLM |
-| Auth | Keycloak (JWT, OAuth2/OIDC) |
-| Voz | VAPI + Twilio |
-| Infra | OpenBSD + Docker con hardening |
-
-## Equipo
-
-| Quién | Hace |
-|-------|------|
-| **Illya** | PM, estrategia, frontend |
-| **Norberto** | n8n, automatizaciones |
-| **Carlos** | Dirección creativa, UI |
-| **Isaac** | DevOps, ciberseguridad, hardening |
-
-## Arrancar
-
-```bash
-git clone https://github.com/illushkinn/pragma-la.git
-cd pragma
-```
-
-No hay package manager definido todavía — el framework frontend se define por feature en cada spec.
-
-## Desarrollo
-
-Usamos **Spec-Driven Development** (SDD). Antes de escribir código:
-
-1. `specs/[feature].spec.md` — spec con arquitectura, plan y checklist
-2. Refinement — resolver ambigüedad antes de codificar
-3. Implementación — tareas atómicas, un subagente por dominio
-
-Ver `CLAUDE.md` para la constitución técnica completa.
-
-## Seguridad
-
-- `ignore-scripts=true` en `.npmrc` — [fundamento](https://www.nodejs-security.com/blog/npm-ignore-scripts-best-practices-as-security-mitigation-for-malicious-packages)
-- Datos de pacientes nunca salen del servidor propio
-- Región EU o Argentina — nunca US
-- Sin autenticación propia — Keycloak
+| Frontend | Astro (SSG) |
+| Backend | Supabase + n8n + vLLM |
+| Auth | Keycloak (JWT) |
+| Voz | VAPI |
+| Infra | OpenBSD + Docker |
 
 ## Links
 
+- [Web](https://pragma.med)
 - [GitHub](https://github.com/illushkinn/pragma-la)
-- [Vercel](https://pragma-gules.vercel.app)
 
 ---
 
-*Oberá, Misiones — Argentina*
+Oberá, Misiones — Argentina

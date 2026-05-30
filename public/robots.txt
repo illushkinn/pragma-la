@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pragma.med/sitemap-index.xml

@@ -1,6 +1,4 @@
 {
-  "name": "pragma",
-  "framework": null,
-  "outputDirectory": ".",
+  "framework": "astro",
   "trailingSlash": false
 }

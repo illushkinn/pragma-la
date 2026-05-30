@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#00003A"/>
+  <text x="80" y="320" font-family="system-ui" font-size="80" font-weight="800" fill="#0000FF">Pragma</text>
+  <text x="80" y="400" font-family="system-ui" font-size="36" fill="rgba(255,255,255,0.6)">Software médico para centros de salud</text>
+</svg>
