@@ -1,10 +1,10 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
-import content from '../content/es.json'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import content from '../../content/en.json'
 
-const title = 'Pragma — Software médico para centros de salud en Latinoamérica'
-const description = 'Pragma digitaliza tu centro de salud: turnos, recordatorios y seguimiento de pacientes. Sin complicaciones, sin perder la cercanía.'
-const currentLang = 'es'
+const title = 'Pragma — Medical software for healthcare centers in Latin America'
+const description = 'Pragma digitizes your practice: appointments, reminders, and patient follow-ups. No complications, without losing the personal touch.'
+const currentLang = 'en'
 ---
 
 <BaseLayout {title} {description} lang={currentLang}>
@@ -15,8 +15,8 @@ const currentLang = 'es'
       <a href="#que-es" style="color:var(--text-secondary);font-size:0.9rem;">{content.nav.queEs}</a>
       <a href="#como-funciona" style="color:var(--text-secondary);font-size:0.9rem;">{content.nav.comoFunciona}</a>
       <div class="lang-toggle">
-        <span class="lang-btn active">{content.nav.langEs}</span>
-        <a href="/en/" class="lang-btn">{content.nav.langEn}</a>
+        <a href="/" class="lang-btn">{content.nav.langEs}</a>
+        <span class="lang-btn active">{content.nav.langEn}</span>
       </div>
       <button class="theme-toggle" onclick="window.__toggleTheme()" aria-label="Toggle theme">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -38,7 +38,7 @@ const currentLang = 'es'
         </div>
       </div>
       <div style="display:flex;justify-content:center;">
-        <img src="/images/pragma_png1.png" alt="Panel de Pragma" style="max-width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);" />
+        <img src="/images/pragma_png1.png" alt="Pragma dashboard" style="max-width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);" />
       </div>
     </div>
   </section>
@@ -58,7 +58,7 @@ const currentLang = 'es'
           ))}
         </div>
         <div>
-          <img src="/images/pragma_png2.png" alt="Funcionalidades de Pragma" style="max-width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);" />
+          <img src="/images/pragma_png2.png" alt="Pragma features" style="max-width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);" />
         </div>
       </div>
     </div>
@@ -84,7 +84,7 @@ const currentLang = 'es'
           </div>
         </div>
         <div>
-          <img src="/images/pragma_png3.png" alt="Flujo de Pragma" style="max-width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);" />
+          <img src="/images/pragma_png3.png" alt="Pragma flow" style="max-width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);" />
         </div>
       </div>
     </div>
@@ -109,7 +109,7 @@ const currentLang = 'es'
       <p class="section-subtitle">{content.paraQuien.subtitle}</p>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2xl);align-items:center;margin-top:var(--space-xl);">
         <div>
-          <img src="/images/pragma_png4.png" alt="Especialidades" style="max-width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);" />
+          <img src="/images/pragma_png4.png" alt="Specialties" style="max-width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);" />
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:var(--space-md);">
           {content.paraQuien.items.map((item) => (
@@ -127,7 +127,7 @@ const currentLang = 'es'
     <div class="container" style="max-width:960px;">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2xl);align-items:center;">
         <div>
-          <img src="/images/pragma_png5.png" alt="Agendá una demo" style="max-width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);" />
+          <img src="/images/pragma_png5.png" alt="Book a demo" style="max-width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);" />
         </div>
         <div class="glass-card" style="padding:var(--space-2xl);text-align:left;">
           <h2 style="font-size:1.75rem;margin-bottom:var(--space-sm);text-align:center;">{content.demo.title}</h2>
@@ -143,7 +143,7 @@ const currentLang = 'es'
             </div>
             <div>
               <label for="whatsapp" style="display:block;font-size:0.85rem;font-weight:700;margin-bottom:var(--space-xs);color:var(--text-secondary);">{content.demo.whatsapp}</label>
-              <input id="whatsapp" type="tel" required placeholder={content.demo.whatsappPlaceholder} style="width:100%;padding:var(--space-md);border-radius:var(--radius-md);border:var(--glass-border);background:var(--surface-glass);color:var(--text-primary);font-family:var(--font-body);font-size:1rem;" />
+              <input id="whatsapp" type="email" required placeholder={content.demo.whatsappPlaceholder} style="width:100%;padding:var(--space-md);border-radius:var(--radius-md);border:var(--glass-border);background:var(--surface-glass);color:var(--text-primary);font-family:var(--font-body);font-size:1rem;" />
             </div>
             <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:var(--space-sm);">{content.demo.cta}</button>
             <p style="font-size:0.75rem;color:var(--text-secondary);text-align:center;margin-top:var(--space-sm);">{content.demo.disclaimer}</p>

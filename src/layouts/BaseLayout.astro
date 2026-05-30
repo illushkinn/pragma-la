@@ -5,13 +5,14 @@ export interface Props {
   title: string
   description: string
   ogImage?: string
+  lang?: string
 }
 
-const { title, description, ogImage = '/og-image.svg' } = Astro.props
+const { title, description, ogImage = '/og-image.svg', lang = 'es' } = Astro.props
 ---
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,5 +37,25 @@ const { title, description, ogImage = '/og-image.svg' } = Astro.props
   </head>
   <body>
     <slot />
+    <script>
+      (function() {
+        var theme = localStorage.getItem('pragma-theme');
+        if (theme === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+      window.__toggleTheme = function() {
+        var html = document.documentElement;
+        var current = html.getAttribute('data-theme');
+        var next = current === 'light' ? '' : 'light';
+        if (next) {
+          html.setAttribute('data-theme', 'light');
+          localStorage.setItem('pragma-theme', 'light');
+        } else {
+          html.removeAttribute('data-theme');
+          localStorage.removeItem('pragma-theme');
+        }
+      };
+    </script>
   </body>
 </html>

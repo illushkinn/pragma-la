@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "logo": "Pragma",
+    "queEs": "Qué es",
+    "comoFunciona": "Cómo funciona",
+    "agendarDemo": "Agendar demo",
+    "langEs": "ES",
+    "langEn": "EN"
+  },
+  "hero": {
+    "badge": "Para centros de salud en Latinoamérica",
+    "title1": "Dejás de perder pacientes",
+    "title2": "y ganás tiempo para atender",
+    "description": "Turnos que se confirman solos, pacientes que vuelven, y un centro que funciona aunque la secretaria esté ocupada. Sin papel, sin planillas, sin llamar uno por uno.",
+    "ctaPrimary": "Agendar una demo",
+    "ctaSecondary": "Conocer más"
+  },
+  "queEs": {
+    "title": "Tu centro de salud, más ordenado",
+    "subtitle": "Sin cambiar tu forma de trabajar. Sin instalar programas raros. Sin perder el trato cara a cara con tus pacientes.",
+    "cards": [
+      { "title": "Turnos sin llamar", "text": "Tus pacientes agendan por WhatsApp, reciben recordatorios y confirman con un toque. Se acabó el 'me olvidé'." },
+      { "title": "Pacientes que vuelven", "text": "El sistema avisa cuando alguien tiene que volver. No se te pasa más un control pendiente." },
+      { "title": "Todo desde el celular", "text": "Ves las métricas de tu centro desde el celular. Sabés cuántos pacientes atendiste, cuántos no vinieron, y cuánto facturaste." }
+    ]
+  },
+  "comoFunciona": {
+    "title": "Tres pasos y estás listo",
+    "subtitle": "No necesitás ser técnico. En una semana tu centro ya está funcionando con Pragma.",
+    "steps": [
+      { "number": "1", "title": "Te mostramos cómo funciona", "text": "Agendás una demo de 20 minutos. Te mostramos el sistema con un centro como el tuyo." },
+      { "number": "2", "title": "Lo configuramos por vos", "text": "Te creamos el WhatsApp profesional, conectamos tu agenda, y dejamos todo andando. No tocás un botón." },
+      { "number": "3", "title": "Empezás a notar la diferencia", "text": "Menos ausencias, pacientes que vuelven solos, y tiempo libre para lo que importa: atender." }
+    ]
+  },
+  "casoReal": {
+    "title": "Resultados que hablan solos",
+    "subtitle": "Todavía estamos trabajando con los primeros centros. Cuando tengamos resultados concretos, los vamos a compartir acá.",
+    "cta": "Agendá una demo",
+    "placeholder": "¿Querés ser el primero en obtener resultados con Pragma?"
+  },
+  "paraQuien": {
+    "title": "Para centros como el tuyo",
+    "subtitle": "Odontólogos, dermatólogos, clínicas, policonsultorios. Si atendés pacientes, Pragma te sirve.",
+    "items": ["Odontólogos", "Dermatología", "Clínicas", "Oftalmología", "Kinesiología", "Veterinarias"]
+  },
+  "demo": {
+    "title": "Agendá una demo",
+    "subtitle": "Te mostramos cómo queda tu centro con Pragma. Sin compromiso.",
+    "nombre": "Nombre",
+    "especialidad": "Especialidad",
+    "whatsapp": "WhatsApp",
+    "nombrePlaceholder": "Tu nombre",
+    "especialidadPlaceholder": "Ej: Odontología",
+    "whatsappPlaceholder": "Ej: 11 5555-5555",
+    "cta": "Quiero agendar una demo",
+    "disclaimer": "Te contactamos por WhatsApp en las próximas 24 horas."
+  },
+  "registro": {
+    "text": "¿Ya conocés Pragma y querés empezar?",
+    "cta": "Accedé a tu centro"
+  },
+  "footer": {
+    "location": "Latinoamérica"
+  }
+}

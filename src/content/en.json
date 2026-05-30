@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "logo": "Pragma",
+    "queEs": "What it is",
+    "comoFunciona": "How it works",
+    "agendarDemo": "Book a demo",
+    "langEs": "ES",
+    "langEn": "EN"
+  },
+  "hero": {
+    "badge": "For healthcare centers in Latin America",
+    "title1": "Stop losing patients",
+    "title2": "and gain time to care",
+    "description": "Appointments that confirm themselves, patients who come back, and a practice that runs smoothly even when your front desk is busy. No paper, no spreadsheets, no calling one by one.",
+    "ctaPrimary": "Book a demo",
+    "ctaSecondary": "Learn more"
+  },
+  "queEs": {
+    "title": "Your practice, more organized",
+    "subtitle": "Without changing how you work. Without installing weird software. Without losing the personal touch with your patients.",
+    "cards": [
+      { "title": "Appointments without calls", "text": "Your patients book via WhatsApp, receive reminders and confirm with a tap. No more 'I forgot'." },
+      { "title": "Patients who come back", "text": "The system notifies you when someone needs a follow-up. Never miss a pending checkup again." },
+      { "title": "Everything from your phone", "text": "See your practice metrics from your phone. Know how many patients you saw, how many no-shows, and how much you billed." }
+    ]
+  },
+  "comoFunciona": {
+    "title": "Three steps and you're ready",
+    "subtitle": "You don't need to be technical. In one week your practice is running with Pragma.",
+    "steps": [
+      { "number": "1", "title": "We show you how it works", "text": "Book a 20-minute demo. We'll show you the system with a practice like yours." },
+      { "number": "2", "title": "We set it up for you", "text": "We create your professional WhatsApp, connect your schedule, and get everything running. You don't touch a thing." },
+      { "number": "3", "title": "You start noticing the difference", "text": "Fewer no-shows, patients who come back on their own, and free time for what matters: caring." }
+    ]
+  },
+  "casoReal": {
+    "title": "Results that speak for themselves",
+    "subtitle": "We're still working with our first centers. When we have concrete results, we'll share them here.",
+    "cta": "Book a demo",
+    "placeholder": "Want to be the first to get results with Pragma?"
+  },
+  "paraQuien": {
+    "title": "For practices like yours",
+    "subtitle": "Dentists, dermatologists, clinics, multi-specialty centers. If you see patients, Pragma works for you.",
+    "items": ["Dentists", "Dermatology", "Clinics", "Ophthalmology", "Kinesiology", "Veterinary"]
+  },
+  "demo": {
+    "title": "Book a demo",
+    "subtitle": "Pragma is currently available in Latin America. Leave your email and we'll let you know when we launch in your region.",
+    "nombre": "Name",
+    "especialidad": "Specialty",
+    "whatsapp": "Email",
+    "nombrePlaceholder": "Your name",
+    "especialidadPlaceholder": "e.g. Dentistry",
+    "whatsappPlaceholder": "your@email.com",
+    "cta": "Notify me when available",
+    "disclaimer": "Coming to the US and Europe. We'll keep you posted."
+  },
+  "registro": {
+    "text": "Already know Pragma and want to get started?",
+    "cta": "Access your center"
+  },
+  "footer": {
+    "location": "Latin America"
+  }
+}
