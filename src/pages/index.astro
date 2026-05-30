@@ -17,46 +17,56 @@ const description = 'Pragma digitaliza tu centro de salud: turnos, recordatorios
   </nav>
 
   <!-- 1. HERO -->
-  <section class="section" style="text-align:center;padding-top:var(--space-3xl);">
-    <div class="container" style="max-width:800px;">
-      <p style="color:var(--mind-purple);font-weight:700;font-size:0.9rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:var(--space-md);">
-        Para centros de salud en Argentina
-      </p>
-      <h1 style="font-size:3.25rem;margin-bottom:var(--space-lg);">
-        Dejás de perder pacientes<br />
-        <span style="color:var(--electric-blue);">y ganás tiempo para atender</span>
-      </h1>
-      <p style="font-size:1.125rem;color:var(--text-secondary);max-width:600px;margin:0 auto var(--space-xl);">
-        Turnos que se confirman solos, pacientes que vuelven, y un centro que funciona
-        aunque la secretaria esté ocupada. Sin papel, sin planillas, sin llamar uno por uno.
-      </p>
-      <div style="display:flex;gap:var(--space-md);justify-content:center;flex-wrap:wrap;">
-        <a href="#demo" class="btn btn-primary">Agendar una demo</a>
-        <a href="#que-es" class="btn btn-glass">Conocer más</a>
+  <section class="section" style="padding-top:var(--space-3xl);">
+    <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2xl);align-items:center;">
+      <div>
+        <p style="color:var(--mind-purple);font-weight:700;font-size:0.9rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:var(--space-md);">
+          Para centros de salud en Argentina
+        </p>
+        <h1 style="font-size:3.25rem;margin-bottom:var(--space-lg);">
+          Dejás de perder pacientes<br />
+          <span style="color:var(--electric-blue);">y ganás tiempo para atender</span>
+        </h1>
+        <p style="font-size:1.125rem;color:var(--text-secondary);max-width:500px;margin-bottom:var(--space-xl);">
+          Turnos que se confirman solos, pacientes que vuelven, y un centro que funciona
+          aunque la secretaria esté ocupada. Sin papel, sin planillas, sin llamar uno por uno.
+        </p>
+        <div style="display:flex;gap:var(--space-md);flex-wrap:wrap;">
+          <a href="#demo" class="btn btn-primary">Agendar una demo</a>
+          <a href="#que-es" class="btn btn-glass">Conocer más</a>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:center;">
+        <img src="/images/pragma_png1.png" alt="Panel de Pragma" style="max-width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);" />
       </div>
     </div>
   </section>
 
   <!-- 2. QUÉ ES PRAGMA -->
   <section id="que-es" class="section" style="text-align:center;">
-    <div class="container" style="max-width:720px;">
+    <div class="container">
       <h2 class="section-title">Tu centro de salud, más ordenado</h2>
       <p class="section-subtitle">
         Sin cambiar tu forma de trabajar. Sin instalar programas raros. Sin perder el trato
         cara a cara con tus pacientes.
       </p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--space-lg);margin-top:var(--space-xl);text-align:left;">
-        <div class="glass-card" style="padding:var(--space-xl);">
-          <h3 style="font-size:1.25rem;margin-bottom:var(--space-sm);">Turnos sin llamar</h3>
-          <p style="color:var(--text-secondary);font-size:0.95rem;">Tus pacientes agenda por WhatsApp, reciben recordatorios y confirman con un toque. Se acabó el "me olvidé".</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2xl);align-items:center;margin-top:var(--space-xl);">
+        <div style="text-align:left;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-lg);">
+          <div class="glass-card" style="padding:var(--space-xl);">
+            <h3 style="font-size:1.25rem;margin-bottom:var(--space-sm);">Turnos sin llamar</h3>
+            <p style="color:var(--text-secondary);font-size:0.95rem;">Tus pacientes agenda por WhatsApp, reciben recordatorios y confirman con un toque. Se acabó el "me olvidé".</p>
+          </div>
+          <div class="glass-card" style="padding:var(--space-xl);">
+            <h3 style="font-size:1.25rem;margin-bottom:var(--space-sm);">Pacientes que vuelven</h3>
+            <p style="color:var(--text-secondary);font-size:0.95rem;">El sistema avisa cuando alguien tiene que volver. No se te pasa más un control pendiente.</p>
+          </div>
+          <div class="glass-card" style="padding:var(--space-xl);">
+            <h3 style="font-size:1.25rem;margin-bottom:var(--space-sm);">Todo desde el celular</h3>
+            <p style="color:var(--text-secondary);font-size:0.95rem;">Ves las métricas de tu centro desde el celular. Sabés cuántos pacientes atendiste, cuántos no vinieron, y cuánto facturaste.</p>
+          </div>
         </div>
-        <div class="glass-card" style="padding:var(--space-xl);">
-          <h3 style="font-size:1.25rem;margin-bottom:var(--space-sm);">Pacientes que vuelven</h3>
-          <p style="color:var(--text-secondary);font-size:0.95rem;">El sistema avisa cuando alguien tiene que volver. No se te pasa más un control pendiente.</p>
-        </div>
-        <div class="glass-card" style="padding:var(--space-xl);">
-          <h3 style="font-size:1.25rem;margin-bottom:var(--space-sm);">Todo desde el celular</h3>
-          <p style="color:var(--text-secondary);font-size:0.95rem;">Ves las métricas de tu centro desde el celular. Sabés cuántos pacientes atendiste, cuántos no vinieron, y cuánto facturaste.</p>
+        <div>
+          <img src="/images/pragma_png2.png" alt="Funcionalidades de Pragma" style="max-width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);" />
         </div>
       </div>
     </div>
@@ -64,30 +74,37 @@ const description = 'Pragma digitaliza tu centro de salud: turnos, recordatorios
 
   <!-- 3. CÓMO FUNCIONA -->
   <section id="como-funciona" class="section" style="text-align:center;">
-    <div class="container" style="max-width:800px;">
+    <div class="container">
       <h2 class="section-title">Tres pasos y estás listo</h2>
       <p class="section-subtitle">No necesitás ser técnico. En una semana tu centro ya está funcionando con Pragma.</p>
-      <div style="display:flex;flex-direction:column;gap:var(--space-xl);margin-top:var(--space-xl);text-align:left;">
-        <div style="display:flex;gap:var(--space-xl);align-items:flex-start;">
-          <span style="font-family:var(--font-heading);font-weight:800;font-size:3rem;color:var(--electric-blue);line-height:1;min-width:60px;">1</span>
-          <div>
-            <h3 style="font-size:1.25rem;margin-bottom:var(--space-xs);">Te mostramos cómo funciona</h3>
-            <p style="color:var(--text-secondary);">Agendás una demo de 20 minutos por WhatsApp. Te mostramos el sistema con un centro como el tuyo.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2xl);align-items:center;margin-top:var(--space-xl);">
+        <div style="text-align:left;">
+          <div style="display:flex;flex-direction:column;gap:var(--space-xl);">
+            <div style="display:flex;gap:var(--space-xl);align-items:flex-start;">
+              <span style="font-family:var(--font-heading);font-weight:800;font-size:3rem;color:var(--electric-blue);line-height:1;min-width:60px;">1</span>
+              <div>
+                <h3 style="font-size:1.25rem;margin-bottom:var(--space-xs);">Te mostramos cómo funciona</h3>
+                <p style="color:var(--text-secondary);">Agendás una demo de 20 minutos. Te mostramos el sistema con un centro como el tuyo.</p>
+              </div>
+            </div>
+            <div style="display:flex;gap:var(--space-xl);align-items:flex-start;">
+              <span style="font-family:var(--font-heading);font-weight:800;font-size:3rem;color:var(--electric-blue);line-height:1;min-width:60px;">2</span>
+              <div>
+                <h3 style="font-size:1.25rem;margin-bottom:var(--space-xs);">Lo configuramos por vos</h3>
+                <p style="color:var(--text-secondary);">Te creamos el WhatsApp profesional, conectamos tu agenda, y dejamos todo andando. No tocás un botón.</p>
+              </div>
+            </div>
+            <div style="display:flex;gap:var(--space-xl);align-items:flex-start;">
+              <span style="font-family:var(--font-heading);font-weight:800;font-size:3rem;color:var(--electric-blue);line-height:1;min-width:60px;">3</span>
+              <div>
+                <h3 style="font-size:1.25rem;margin-bottom:var(--space-xs);">Empezás a notar la diferencia</h3>
+                <p style="color:var(--text-secondary);">Menos ausencias, pacientes que vuelven solos, y tiempo libre para lo que importa: atender.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div style="display:flex;gap:var(--space-xl);align-items:flex-start;">
-          <span style="font-family:var(--font-heading);font-weight:800;font-size:3rem;color:var(--electric-blue);line-height:1;min-width:60px;">2</span>
-          <div>
-            <h3 style="font-size:1.25rem;margin-bottom:var(--space-xs);">Lo configuramos por vos</h3>
-            <p style="color:var(--text-secondary);">Te creamos el WhatsApp profesional, conectamos tu agenda, y dejamos todo andando. No tocás un botón.</p>
-          </div>
-        </div>
-        <div style="display:flex;gap:var(--space-xl);align-items:flex-start;">
-          <span style="font-family:var(--font-heading);font-weight:800;font-size:3rem;color:var(--electric-blue);line-height:1;min-width:60px;">3</span>
-          <div>
-            <h3 style="font-size:1.25rem;margin-bottom:var(--space-xs);">Empezás a notar la diferencia</h3>
-            <p style="color:var(--text-secondary);">Menos ausencias, pacientes que vuelven solos, y tiempo libre para lo que importa: atender.</p>
-          </div>
+        <div>
+          <img src="/images/pragma_png3.png" alt="Flujo de Pragma" style="max-width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);" />
         </div>
       </div>
     </div>
@@ -109,27 +126,20 @@ const description = 'Pragma digitaliza tu centro de salud: turnos, recordatorios
 
   <!-- 5. PARA QUIÉN ES -->
   <section id="para-quien" class="section" style="text-align:center;">
-    <div class="container" style="max-width:800px;">
+    <div class="container">
       <h2 class="section-title">Para centros como el tuyo</h2>
       <p class="section-subtitle">Odontólogos, dermatólogos, clínicas, policonsultorios. Si atendés pacientes, Pragma te sirve.</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-md);margin-top:var(--space-xl);">
-        <div class="glass-card" style="padding:var(--space-lg);">
-          <p style="font-weight:700;">🦷 Odontólogos</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2xl);align-items:center;margin-top:var(--space-xl);">
+        <div>
+          <img src="/images/pragma_png4.png" alt="Especialidades" style="max-width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);" />
         </div>
-        <div class="glass-card" style="padding:var(--space-lg);">
-          <p style="font-weight:700;">🧴 Dermatología</p>
-        </div>
-        <div class="glass-card" style="padding:var(--space-lg);">
-          <p style="font-weight:700;">🏥 Clínicas</p>
-        </div>
-        <div class="glass-card" style="padding:var(--space-lg);">
-          <p style="font-weight:700;">👁️ Oftalmología</p>
-        </div>
-        <div class="glass-card" style="padding:var(--space-lg);">
-          <p style="font-weight:700;">🩺 Kinesiología</p>
-        </div>
-        <div class="glass-card" style="padding:var(--space-lg);">
-          <p style="font-weight:700;">🐾 Veterinarias</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:var(--space-md);">
+          <div class="glass-card" style="padding:var(--space-lg);"><p style="font-weight:700;">🦷 Odontólogos</p></div>
+          <div class="glass-card" style="padding:var(--space-lg);"><p style="font-weight:700;">🧴 Dermatología</p></div>
+          <div class="glass-card" style="padding:var(--space-lg);"><p style="font-weight:700;">🏥 Clínicas</p></div>
+          <div class="glass-card" style="padding:var(--space-lg);"><p style="font-weight:700;">👁️ Oftalmología</p></div>
+          <div class="glass-card" style="padding:var(--space-lg);"><p style="font-weight:700;">🩺 Kinesiología</p></div>
+          <div class="glass-card" style="padding:var(--space-lg);"><p style="font-weight:700;">🐾 Veterinarias</p></div>
         </div>
       </div>
     </div>
@@ -137,32 +147,37 @@ const description = 'Pragma digitaliza tu centro de salud: turnos, recordatorios
 
   <!-- 6. AGENDA UNA DEMO -->
   <section id="demo" class="section" style="text-align:center;">
-    <div class="container" style="max-width:560px;">
-      <div class="glass-card" style="padding:var(--space-2xl);text-align:left;">
-        <h2 style="font-size:1.75rem;margin-bottom:var(--space-sm);text-align:center;">Agendá una demo</h2>
-        <p style="color:var(--text-secondary);margin-bottom:var(--space-xl);text-align:center;font-size:0.95rem;">
-          Te mostramos cómo queda tu centro con Pragma. Sin compromiso.
-        </p>
-        <form style="display:flex;flex-direction:column;gap:var(--space-md);" data-demo-form>
-          <div>
-            <label for="nombre" style="display:block;font-size:0.85rem;font-weight:700;margin-bottom:var(--space-xs);color:var(--text-secondary);">Nombre</label>
-            <input id="nombre" type="text" required placeholder="Tu nombre" style="width:100%;padding:var(--space-md);border-radius:var(--radius-md);border:var(--glass-border);background:var(--surface-glass);color:var(--text-primary);font-family:var(--font-body);font-size:1rem;" />
-          </div>
-          <div>
-            <label for="especialidad" style="display:block;font-size:0.85rem;font-weight:700;margin-bottom:var(--space-xs);color:var(--text-secondary);">Especialidad</label>
-            <input id="especialidad" type="text" required placeholder="Ej: Odontología" style="width:100%;padding:var(--space-md);border-radius:var(--radius-md);border:var(--glass-border);background:var(--surface-glass);color:var(--text-primary);font-family:var(--font-body);font-size:1rem;" />
-          </div>
-          <div>
-            <label for="whatsapp" style="display:block;font-size:0.85rem;font-weight:700;margin-bottom:var(--space-xs);color:var(--text-secondary);">WhatsApp</label>
-            <input id="whatsapp" type="tel" required placeholder="Ej: 11 5555-5555" style="width:100%;padding:var(--space-md);border-radius:var(--radius-md);border:var(--glass-border);background:var(--surface-glass);color:var(--text-primary);font-family:var(--font-body);font-size:1rem;" />
-          </div>
-          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:var(--space-sm);">
-            Quiero agendar una demo
-          </button>
-          <p style="font-size:0.75rem;color:var(--text-secondary);text-align:center;margin-top:var(--space-sm);">
-            Te contactamos por WhatsApp en las próximas 24 horas.
+    <div class="container" style="max-width:960px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2xl);align-items:center;">
+        <div>
+          <img src="/images/pragma_png5.png" alt="Agendá una demo" style="max-width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);" />
+        </div>
+        <div class="glass-card" style="padding:var(--space-2xl);text-align:left;">
+          <h2 style="font-size:1.75rem;margin-bottom:var(--space-sm);text-align:center;">Agendá una demo</h2>
+          <p style="color:var(--text-secondary);margin-bottom:var(--space-xl);text-align:center;font-size:0.95rem;">
+            Te mostramos cómo queda tu centro con Pragma. Sin compromiso.
           </p>
-        </form>
+          <form style="display:flex;flex-direction:column;gap:var(--space-md);" data-demo-form>
+            <div>
+              <label for="nombre" style="display:block;font-size:0.85rem;font-weight:700;margin-bottom:var(--space-xs);color:var(--text-secondary);">Nombre</label>
+              <input id="nombre" type="text" required placeholder="Tu nombre" style="width:100%;padding:var(--space-md);border-radius:var(--radius-md);border:var(--glass-border);background:var(--surface-glass);color:var(--text-primary);font-family:var(--font-body);font-size:1rem;" />
+            </div>
+            <div>
+              <label for="especialidad" style="display:block;font-size:0.85rem;font-weight:700;margin-bottom:var(--space-xs);color:var(--text-secondary);">Especialidad</label>
+              <input id="especialidad" type="text" required placeholder="Ej: Odontología" style="width:100%;padding:var(--space-md);border-radius:var(--radius-md);border:var(--glass-border);background:var(--surface-glass);color:var(--text-primary);font-family:var(--font-body);font-size:1rem;" />
+            </div>
+            <div>
+              <label for="whatsapp" style="display:block;font-size:0.85rem;font-weight:700;margin-bottom:var(--space-xs);color:var(--text-secondary);">WhatsApp</label>
+              <input id="whatsapp" type="tel" required placeholder="Ej: 11 5555-5555" style="width:100%;padding:var(--space-md);border-radius:var(--radius-md);border:var(--glass-border);background:var(--surface-glass);color:var(--text-primary);font-family:var(--font-body);font-size:1rem;" />
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:var(--space-sm);">
+              Quiero agendar una demo
+            </button>
+            <p style="font-size:0.75rem;color:var(--text-secondary);text-align:center;margin-top:var(--space-sm);">
+              Te contactamos por WhatsApp en las próximas 24 horas.
+            </p>
+          </form>
+        </div>
       </div>
     </div>
   </section>

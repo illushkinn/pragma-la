@@ -7,7 +7,7 @@ export interface Props {
   ogImage?: string
 }
 
-const { title, description, ogImage = '/og-image.png' } = Astro.props
+const { title, description, ogImage = '/og-image.svg' } = Astro.props
 ---
 
 <!DOCTYPE html>
@@ -29,7 +29,7 @@ const { title, description, ogImage = '/og-image.png' } = Astro.props
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&display=swap" rel="stylesheet" />
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,700,401&display=swap" rel="stylesheet" />
 
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href="https://pragma.med" />
 
     <title>{title}</title>
