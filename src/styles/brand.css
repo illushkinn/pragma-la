@@ -274,6 +274,27 @@ img {
   color: var(--text-primary);
 }
 
+.nav-logo {
+  max-height: 32px;
+  width: auto;
+}
+
+.nav-logo-dark {
+  display: block;
+}
+
+.nav-logo-light {
+  display: none;
+}
+
+[data-theme="light"] .nav-logo-dark {
+  display: none;
+}
+
+[data-theme="light"] .nav-logo-light {
+  display: block;
+}
+
 @media (max-width: 768px) {
   html { font-size: 16px; }
   .section { padding: var(--space-2xl) 0; }
