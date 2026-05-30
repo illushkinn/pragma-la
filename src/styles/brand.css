@@ -187,6 +187,10 @@ img {
   line-height: 1.05;
 }
 
+.hero-h1--es {
+  font-size: 3.5rem;
+}
+
 .hero-highlight {
   background: linear-gradient(135deg, var(--electric-blue), var(--mind-purple));
   -webkit-background-clip: text;
@@ -275,4 +279,29 @@ img {
   .section { padding: var(--space-2xl) 0; }
   .section-title { font-size: 1.75rem; }
   .hero-h1 { font-size: 2.5rem; }
+  .hero-h1--es { font-size: 2.5rem; }
+  
+  nav {
+    flex-direction: column !important;
+    gap: var(--space-md) !important;
+    padding: var(--space-md) !important;
+  }
+  
+  nav > div:last-child {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+  
+  .container > div[style*="display:grid"] {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .hero-description {
+    max-width: 100% !important;
+  }
+  
+  section[class="section"] .container > div[style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-xl) !important;
+  }
 }

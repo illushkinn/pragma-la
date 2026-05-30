@@ -10,7 +10,7 @@ const currentLang = 'es'
 <BaseLayout {title} {description} lang={currentLang}>
   <!-- NAV -->
   <nav style="display:flex;align-items:center;justify-content:space-between;padding:var(--space-lg) var(--space-xl);max-width:1200px;margin:0 auto;">
-    <span style="font-family:var(--font-heading);font-weight:800;font-size:1.5rem;">{content.nav.logo}</span>
+    <img src="/images/pragma_logo.png" alt="Pragma" style="max-height:32px;width:auto;" />
     <div style="display:flex;gap:var(--space-md);align-items:center;">
       <a href="#que-es" style="color:var(--text-secondary);font-size:0.9rem;">{content.nav.queEs}</a>
       <a href="#como-funciona" style="color:var(--text-secondary);font-size:0.9rem;">{content.nav.comoFunciona}</a>
@@ -30,7 +30,7 @@ const currentLang = 'es'
     <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2xl);align-items:center;">
       <div>
         <p class="hero-badge">{content.hero.badge}</p>
-        <h1 class="hero-h1">{content.hero.title1}<br /><span class="hero-highlight">{content.hero.title2}</span></h1>
+        <h1 class="hero-h1 hero-h1--es">{content.hero.title1}<br /><span class="hero-highlight">{content.hero.title2}</span></h1>
         <p class="hero-description">{content.hero.description}</p>
         <div style="display:flex;gap:var(--space-md);flex-wrap:wrap;">
           <a href="#demo" class="btn btn-primary">{content.hero.ctaPrimary}</a>
