@@ -1,0 +1,17 @@
+---
+export interface Props {
+  name: string
+  range: string
+  desc: string
+  gpu: string
+}
+
+const { name, range, desc, gpu } = Astro.props
+---
+
+<div class="pricing-card glass-card card-pad-xl card-align-center">
+  <p class="pricing-name">{name}</p>
+  <p class="pricing-range">{range}</p>
+  <p class="pricing-desc">{desc}</p>
+  <p class="pricing-gpu">{gpu}</p>
+</div>

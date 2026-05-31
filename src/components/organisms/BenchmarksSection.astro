@@ -1,0 +1,27 @@
+---
+import SectionTitle from '../atoms/SectionTitle.astro'
+import GlassCard from '../atoms/GlassCard.astro'
+
+export interface Props {
+  content: any
+}
+
+const { content } = Astro.props
+---
+
+<section id="resultados" class="section">
+  <div class="container">
+    <SectionTitle title={content.title} subtitle={content.subtitle} />
+    <div class="benchmark-grid">
+      {content.items.map((item: any) => (
+        <GlassCard padding="xl" textAlign="center">
+          <p class="benchmark-metric">{item.metric}</p>
+          <p class="benchmark-desc">{item.desc}</p>
+        </GlassCard>
+      ))}
+    </div>
+    <div style="text-align:center;margin-top:var(--space-xl);">
+      <a href="#demo" class="btn btn-primary">{content.cta}</a>
+    </div>
+  </div>
+</section>

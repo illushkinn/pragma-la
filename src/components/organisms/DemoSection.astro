@@ -1,0 +1,25 @@
+---
+import GlassCard from '../atoms/GlassCard.astro'
+import DemoForm from '../molecules/DemoForm.astro'
+
+export interface Props {
+  content: any
+}
+
+const { content } = Astro.props
+---
+
+<section id="demo" class="section">
+  <div class="container" style="max-width:960px;">
+    <div class="demo-grid">
+      <div class="demo-image">
+        <img src="/images/pragma_png5.png" alt="Book a demo" class="section-img" />
+      </div>
+      <GlassCard padding="xl">
+        <h2 class="demo-title">{content.title}</h2>
+        <p class="demo-subtitle">{content.subtitle}</p>
+        <DemoForm content={content} />
+      </GlassCard>
+    </div>
+  </div>
+</section>

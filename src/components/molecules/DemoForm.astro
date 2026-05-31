@@ -1,0 +1,24 @@
+---
+export interface Props {
+  content: any
+}
+
+const { content } = Astro.props
+---
+
+<form class="demo-form" data-demo-form>
+  <div>
+    <label for="nombre">{content.nombre}</label>
+    <input id="nombre" type="text" required placeholder={content.nombrePlaceholder} />
+  </div>
+  <div>
+    <label for="especialidad">{content.especialidad}</label>
+    <input id="especialidad" type="text" required placeholder={content.especialidadPlaceholder} />
+  </div>
+  <div>
+    <label for="whatsapp">{content.whatsapp}</label>
+    <input id="whatsapp" type="tel" required placeholder={content.whatsappPlaceholder} />
+  </div>
+  <button type="submit" class="btn btn-primary btn-full">{content.cta}</button>
+  <p class="demo-disclaimer">{content.disclaimer}</p>
+</form>

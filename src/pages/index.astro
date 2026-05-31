@@ -2,171 +2,39 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 import content from '../content/es.json'
 
-const title = 'Pragma — Software médico para centros de salud en Latinoamérica'
-const description = 'Pragma digitaliza tu centro de salud: turnos, recordatorios y seguimiento de pacientes. Sin complicaciones, sin perder la cercanía.'
+import Navbar from '../components/molecules/Navbar.astro'
+import HeroSection from '../components/organisms/HeroSection.astro'
+import AiCapabilities from '../components/organisms/AiCapabilities.astro'
+import WhyPrivate from '../components/organisms/WhyPrivate.astro'
+import ManagementTools from '../components/organisms/ManagementTools.astro'
+import ArchitectureSection from '../components/organisms/ArchitectureSection.astro'
+import IntegrationsSection from '../components/organisms/IntegrationsSection.astro'
+import DeploymentSection from '../components/organisms/DeploymentSection.astro'
+import SecuritySection from '../components/organisms/SecuritySection.astro'
+import BenchmarksSection from '../components/organisms/BenchmarksSection.astro'
+import AudienceSection from '../components/organisms/AudienceSection.astro'
+import DisclaimerSection from '../components/organisms/DisclaimerSection.astro'
+import DemoSection from '../components/organisms/DemoSection.astro'
+import FooterSection from '../components/organisms/FooterSection.astro'
+
+const title = 'Pragma — Inteligencia clínica privada para centros de salud en Latinoamérica'
+const description = 'Chatbot clínico, análisis de imágenes y diagnóstico diferencial. 100% on-premise, open source.'
 const currentLang = 'es'
 ---
 
 <BaseLayout {title} {description} lang={currentLang}>
-  <!-- NAV -->
-  <nav style="display:flex;align-items:center;justify-content:space-between;padding:var(--space-lg) var(--space-xl);max-width:1200px;margin:0 auto;">
-    <img src="/images/pragma_png2.png" alt="Pragma" class="nav-logo nav-logo-dark" />
-    <img src="/images/pragma_logo.png" alt="Pragma" class="nav-logo nav-logo-light" />
-    <div style="display:flex;gap:var(--space-md);align-items:center;">
-      <a href="#que-es" style="color:var(--text-secondary);font-size:0.9rem;">{content.nav.queEs}</a>
-      <a href="#como-funciona" style="color:var(--text-secondary);font-size:0.9rem;">{content.nav.comoFunciona}</a>
-      <div class="lang-toggle">
-        <span class="lang-btn active">{content.nav.langEs}</span>
-        <a href="/en/" class="lang-btn">{content.nav.langEn}</a>
-      </div>
-      <button class="theme-toggle" onclick="window.__toggleTheme()" aria-label="Toggle theme">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
-      <a href="#demo" class="btn btn-primary" style="padding:var(--space-sm) var(--space-lg);font-size:0.9rem;">{content.nav.agendarDemo}</a>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section class="section" style="padding-top:var(--space-3xl);">
-    <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2xl);align-items:center;">
-      <div>
-        <p class="hero-badge">{content.hero.badge}</p>
-        <h1 class="hero-h1 hero-h1--es">{content.hero.title1}<br /><span class="hero-highlight">{content.hero.title2}</span></h1>
-        <p class="hero-description">{content.hero.description}</p>
-        <div style="display:flex;gap:var(--space-md);flex-wrap:wrap;">
-          <a href="#demo" class="btn btn-primary">{content.hero.ctaPrimary}</a>
-          <a href="#que-es" class="btn btn-glass">{content.hero.ctaSecondary}</a>
-        </div>
-      </div>
-      <div style="display:flex;justify-content:center;">
-        <img src="/images/pragma_png1.png" alt="Panel de Pragma" style="max-width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);" />
-      </div>
-    </div>
-  </section>
-
-  <!-- QUÉ ES -->
-  <section id="que-es" class="section" style="text-align:center;">
-    <div class="container">
-      <h2 class="section-title">{content.queEs.title}</h2>
-      <p class="section-subtitle">{content.queEs.subtitle}</p>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2xl);align-items:center;margin-top:var(--space-xl);">
-        <div style="text-align:left;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-lg);">
-          {content.queEs.cards.map((card) => (
-            <div class="glass-card" style="padding:var(--space-xl);">
-              <h3 style="font-size:1.25rem;margin-bottom:var(--space-sm);">{card.title}</h3>
-              <p style="color:var(--text-secondary);font-size:0.95rem;">{card.text}</p>
-            </div>
-          ))}
-        </div>
-        <div>
-          <img src="/images/pragma_png2.png" alt="Funcionalidades de Pragma" style="max-width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CÓMO FUNCIONA -->
-  <section id="como-funciona" class="section" style="text-align:center;">
-    <div class="container">
-      <h2 class="section-title">{content.comoFunciona.title}</h2>
-      <p class="section-subtitle">{content.comoFunciona.subtitle}</p>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2xl);align-items:center;margin-top:var(--space-xl);">
-        <div style="text-align:left;">
-          <div style="display:flex;flex-direction:column;gap:var(--space-xl);">
-            {content.comoFunciona.steps.map((step) => (
-              <div style="display:flex;gap:var(--space-xl);align-items:flex-start;">
-                <span class="step-number">{step.number}</span>
-                <div>
-                  <h3 style="font-size:1.25rem;margin-bottom:var(--space-xs);">{step.title}</h3>
-                  <p style="color:var(--text-secondary);">{step.text}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div>
-          <img src="/images/pragma_png3.png" alt="Flujo de Pragma" style="max-width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CASO REAL -->
-  <section id="caso-real" class="section" style="text-align:center;">
-    <div class="container" style="max-width:720px;">
-      <h2 class="section-title">{content.casoReal.title}</h2>
-      <p class="section-subtitle">{content.casoReal.subtitle}</p>
-      <div class="glass-card" style="padding:var(--space-2xl);margin-top:var(--space-xl);">
-        <p style="font-size:1.125rem;color:var(--text-secondary);">{content.casoReal.placeholder}</p>
-        <a href="#demo" class="btn btn-primary" style="margin-top:var(--space-lg);">{content.casoReal.cta}</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- PARA QUIÉN -->
-  <section id="para-quien" class="section" style="text-align:center;">
-    <div class="container">
-      <h2 class="section-title">{content.paraQuien.title}</h2>
-      <p class="section-subtitle">{content.paraQuien.subtitle}</p>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2xl);align-items:center;margin-top:var(--space-xl);">
-        <div>
-          <img src="/images/pragma_png4.png" alt="Especialidades" style="max-width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);" />
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:var(--space-md);">
-          {content.paraQuien.items.map((item) => (
-            <div class="glass-card" style="padding:var(--space-lg);">
-              <p style="font-weight:700;">{item}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DEMO -->
-  <section id="demo" class="section" style="text-align:center;">
-    <div class="container" style="max-width:960px;">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2xl);align-items:center;">
-        <div>
-          <img src="/images/pragma_png5.png" alt="Agendá una demo" style="max-width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);" />
-        </div>
-        <div class="glass-card" style="padding:var(--space-2xl);text-align:left;">
-          <h2 style="font-size:1.75rem;margin-bottom:var(--space-sm);text-align:center;">{content.demo.title}</h2>
-          <p style="color:var(--text-secondary);margin-bottom:var(--space-xl);text-align:center;font-size:0.95rem;">{content.demo.subtitle}</p>
-          <form style="display:flex;flex-direction:column;gap:var(--space-md);" data-demo-form>
-            <div>
-              <label for="nombre" style="display:block;font-size:0.85rem;font-weight:700;margin-bottom:var(--space-xs);color:var(--text-secondary);">{content.demo.nombre}</label>
-              <input id="nombre" type="text" required placeholder={content.demo.nombrePlaceholder} style="width:100%;padding:var(--space-md);border-radius:var(--radius-md);border:var(--glass-border);background:var(--surface-glass);color:var(--text-primary);font-family:var(--font-body);font-size:1rem;" />
-            </div>
-            <div>
-              <label for="especialidad" style="display:block;font-size:0.85rem;font-weight:700;margin-bottom:var(--space-xs);color:var(--text-secondary);">{content.demo.especialidad}</label>
-              <input id="especialidad" type="text" required placeholder={content.demo.especialidadPlaceholder} style="width:100%;padding:var(--space-md);border-radius:var(--radius-md);border:var(--glass-border);background:var(--surface-glass);color:var(--text-primary);font-family:var(--font-body);font-size:1rem;" />
-            </div>
-            <div>
-              <label for="whatsapp" style="display:block;font-size:0.85rem;font-weight:700;margin-bottom:var(--space-xs);color:var(--text-secondary);">{content.demo.whatsapp}</label>
-              <input id="whatsapp" type="tel" required placeholder={content.demo.whatsappPlaceholder} style="width:100%;padding:var(--space-md);border-radius:var(--radius-md);border:var(--glass-border);background:var(--surface-glass);color:var(--text-primary);font-family:var(--font-body);font-size:1rem;" />
-            </div>
-            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:var(--space-sm);">{content.demo.cta}</button>
-            <p style="font-size:0.75rem;color:var(--text-secondary);text-align:center;margin-top:var(--space-sm);">{content.demo.disclaimer}</p>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- REGISTRO -->
-  <section id="registro" class="section" style="text-align:center;padding-bottom:var(--space-3xl);">
-    <div class="container" style="max-width:560px;">
-      <p style="color:var(--text-secondary);font-size:0.9rem;">{content.registro.text}</p>
-      <a href="#demo" class="btn btn-glass" style="margin-top:var(--space-md);">{content.registro.cta}</a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer style="border-top:1px solid var(--border-glass);padding:var(--space-xl) 0;text-align:center;">
-    <div class="container">
-      <p style="font-family:var(--font-heading);font-weight:800;font-size:1.25rem;margin-bottom:var(--space-sm);">Pragma</p>
-      <p style="color:var(--text-secondary);font-size:0.85rem;">{content.footer.location}</p>
-    </div>
-  </footer>
+  <Navbar content={content.nav} lang={currentLang} />
+  <HeroSection content={content.hero} />
+  <AiCapabilities content={content.ai} />
+  <WhyPrivate content={content.whyPrivate} />
+  <ManagementTools content={content.management} />
+  <ArchitectureSection content={content.architecture} />
+  <IntegrationsSection content={content.integrations} />
+  <DeploymentSection content={content.deployment} />
+  <SecuritySection content={content.security} />
+  <BenchmarksSection content={content.benchmarks} />
+  <AudienceSection content={content.audience} />
+  <DisclaimerSection content={content.disclaimer} />
+  <DemoSection content={content.demo} />
+  <FooterSection content={content.footer} />
 </BaseLayout>

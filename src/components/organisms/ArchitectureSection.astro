@@ -1,0 +1,29 @@
+---
+import SectionTitle from '../atoms/SectionTitle.astro'
+
+export interface Props {
+  content: any
+}
+
+const { content } = Astro.props
+---
+
+<section id="arquitectura" class="section">
+  <div class="container">
+    <SectionTitle title={content.title} subtitle={content.subtitle} />
+    <div class="architecture-stack">
+      {content.layers.map((layer: any, i: number) => (
+        <div class="architecture-layer">
+          <div class="layer-indicator">
+            <span class="layer-dot"></span>
+            {i < content.layers.length - 1 && <span class="layer-line"></span>}
+          </div>
+          <div class="layer-content glass-card card-pad-md">
+            <h3 class="layer-name">{layer.name}</h3>
+            <p class="layer-desc">{layer.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

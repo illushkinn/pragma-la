@@ -1,0 +1,17 @@
+---
+import Disclaimer from '../molecules/Disclaimer.astro'
+
+export interface Props {
+  content: any
+}
+
+const { content } = Astro.props
+---
+
+<footer class="footer">
+  <div class="container">
+    <p class="footer-brand">Pragma</p>
+    <p class="footer-location">{content.text}</p>
+    <Disclaimer text={content.disclaimer} />
+  </div>
+</footer>

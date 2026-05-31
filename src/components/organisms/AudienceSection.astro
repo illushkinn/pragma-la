@@ -1,0 +1,23 @@
+---
+import SectionTitle from '../atoms/SectionTitle.astro'
+import GlassCard from '../atoms/GlassCard.astro'
+
+export interface Props {
+  content: any
+}
+
+const { content } = Astro.props
+---
+
+<section class="section">
+  <div class="container">
+    <SectionTitle title={content.title} subtitle={content.subtitle} />
+    <div class="audience-grid">
+      {content.items.map((item: string) => (
+        <GlassCard padding="md" textAlign="center">
+          <p class="audience-item">{item}</p>
+        </GlassCard>
+      ))}
+    </div>
+  </div>
+</section>

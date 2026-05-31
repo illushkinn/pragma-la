@@ -1,0 +1,23 @@
+---
+import SectionTitle from '../atoms/SectionTitle.astro'
+
+export interface Props {
+  content: any
+}
+
+const { content } = Astro.props
+---
+
+<section class="section">
+  <div class="container">
+    <SectionTitle title={content.title} />
+    <ul class="security-list">
+      {content.items.map((item: string) => (
+        <li class="security-item">
+          <span class="security-check"></span>
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

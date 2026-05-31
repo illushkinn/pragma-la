@@ -1,0 +1,15 @@
+---
+import Disclaimer from '../molecules/Disclaimer.astro'
+
+export interface Props {
+  content: any
+}
+
+const { content } = Astro.props
+---
+
+<section class="section section-disclaimer">
+  <div class="container" style="max-width:720px;">
+    <Disclaimer text={content.text} />
+  </div>
+</section>

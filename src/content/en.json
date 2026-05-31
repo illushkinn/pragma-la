@@ -1,65 +1,133 @@
 {
   "nav": {
     "queEs": "What it is",
-    "comoFunciona": "How it works",
-    "agendarDemo": "Book a demo",
+    "ai": "Clinical AI",
+    "gestion": "Management",
+    "demo": "Book a demo",
     "langEs": "ES",
     "langEn": "EN"
   },
   "hero": {
-    "badge": "For healthcare centers in Latin America",
-    "title1": "Stop losing patients",
-    "title2": "and gain time to care",
-    "description": "Appointments that self-confirm. Patients who return. No paper, no hassle.",
+    "badge": "Open source · 100% on-premise · HIPAA/GDPR",
+    "title1": "Private Clinical Intelligence",
+    "title2": "for Your Healthcare Center",
+    "description": "Evidence-based clinical chatbot. Medical image analysis. Differential diagnosis. 100% on your infrastructure. Your data never leaves your network.",
     "ctaPrimary": "Book a demo",
-    "ctaSecondary": "Learn more"
+    "ctaSecondary": "See architecture"
   },
-  "queEs": {
-    "title": "Your practice, more organized",
-    "subtitle": "Same workflow, way more organized.",
-    "cards": [
-      { "title": "Appointments without calls", "text": "Book via WhatsApp, confirm with a tap." },
-      { "title": "Patients who come back", "text": "Get notified when a patient needs follow-up." },
-      { "title": "Everything from your phone", "text": "Practice metrics on your phone." }
-    ]
-  },
-  "comoFunciona": {
-    "title": "Three steps and you're ready",
-    "subtitle": "In one week your practice runs on Pragma.",
+  "ai": {
+    "title": "Four Capabilities. One Platform.",
+    "subtitle": "Medical artificial intelligence designed to enhance your clinical practice.",
+    "howItWorksTitle": "From your question to an evidence-backed answer",
+    "howItWorksSubtitle": "How Pragma processes every clinical query.",
     "steps": [
-      { "number": "1", "title": "We show you how it works", "text": "20-min demo with a practice like yours." },
-      { "number": "2", "title": "We set it up for you", "text": "We set up WhatsApp, connect your calendar. You do nothing." },
-      { "number": "3", "title": "You start noticing the difference", "text": "Fewer no-shows, more time to care." }
+      { "number": "1", "title": "Ask", "text": "Type your query in natural language, like talking to a colleague." },
+      { "number": "2", "title": "Find evidence", "text": "The system searches thousands of papers and clinical guides instantly." },
+      { "number": "3", "title": "Analyze and respond", "text": "The AI generates a response based exclusively on the sources found." },
+      { "number": "4", "title": "Verify and cite", "text": "Assigns a confidence level and adds corresponding citations." },
+      { "number": "5", "title": "Get the result", "text": "Clinical answer with sources, confidence level, and disclaimer." }
+    ],
+    "capabilities": [
+      { "title": "Clinical Chatbot", "desc": "Medical Q&A with evidence and automatic citations", "iconSrc": "/images/capability-chatbot.svg" },
+      { "title": "Image Analysis", "desc": "Interprets X-rays, CT scans, and MRIs", "iconSrc": "/images/capability-imaging.svg" },
+      { "title": "Literature Processing", "desc": "Summarizes papers and clinical guides instantly", "iconSrc": "/images/capability-literature.svg" },
+      { "title": "Differential Diagnosis", "desc": "Suggests diagnoses based on symptoms and labs", "iconSrc": "/images/capability-diagnosis.svg" }
     ]
   },
-  "casoReal": {
-    "title": "Results that speak for themselves",
-    "subtitle": "Results from our first centers coming soon.",
-    "cta": "Book a demo",
-    "placeholder": "Want to be the first to get results with Pragma?"
+  "whyPrivate": {
+    "title": "Privacy isn't optional. It's the foundation.",
+    "subtitle": "Every clinical AI system should be built this way.",
+    "items": [
+      { "title": "100% on-premise", "desc": "Patient data never leaves your servers. No external API dependencies." },
+      { "title": "Open source", "desc": "Full auditability. No vendor lock-in. The community reviews every line." },
+      { "title": "RAG with citations", "desc": "Every answer is grounded in real sources with automatic citations." }
+    ]
   },
-  "paraQuien": {
-    "title": "For practices like yours",
-    "subtitle": "Dentists, dermatologists, clinics, multi-specialty centers. If you see patients, Pragma works for you.",
-    "items": ["Dentists", "Dermatology", "Clinics", "Ophthalmology", "Kinesiology", "Veterinary"]
+  "management": {
+    "title": "Practice Management",
+    "subtitle": "The tools your center needs, included in the platform.",
+    "features": [
+      { "title": "WhatsApp Appointments", "desc": "Patients book and confirm from their phone. No phone calls." },
+      { "title": "Automatic Reminders", "desc": "The system notifies before each appointment. Drastic no-show reduction." },
+      { "title": "Patient Follow-up", "desc": "Alerts when someone needs a pending checkup. Never miss one." },
+      { "title": "Real-time Metrics", "desc": "Revenue, no-shows, occupancy. All from your phone." }
+    ]
+  },
+  "architecture": {
+    "title": "Six Layers. One Mission: Your Privacy.",
+    "subtitle": "Each layer has a specific function. Together they form a system ready for clinical production.",
+    "layers": [
+      { "name": "User Interface", "desc": "What you see: chat screen, buttons, dashboard" },
+      { "name": "Orchestration (MCP)", "desc": "Coordinates everything: routes queries, searches relevant information" },
+      { "name": "Artificial Intelligence", "desc": "The AI model that thinks, reasons, and generates clinical responses (vLLM + RAG)" },
+      { "name": "Knowledge Base", "desc": "Papers, clinical guides, and books stored in Qdrant + PostgreSQL" },
+      { "name": "Infrastructure", "desc": "Servers, GPUs, and Docker containers on OpenBSD" },
+      { "name": "Security", "desc": "Firewall, encryption, network segmentation, and access controls" }
+    ]
+  },
+  "integrations": {
+    "title": "Connects with Everything You Already Use",
+    "subtitle": "Pragma integrates with your existing systems without replacing anything.",
+    "items": [
+      { "title": "MCP Protocol", "desc": "Compatible with Claude, custom apps, and any MCP-speaking client." },
+      { "title": "VAPI Voice", "desc": "Voice interface for elderly and non-digital patients." },
+      { "title": "WhatsApp", "desc": "Direct patient communication from the platform." },
+      { "title": "REST API", "desc": "Integration with existing HIS, PACS, and EHR systems." }
+    ]
+  },
+  "deployment": {
+    "title": "Transparent Investment. Predictable Results.",
+    "subtitle": "From USD 3,000 to enterprise infrastructure. Everything runs on your servers.",
+    "tiers": [
+      { "name": "Basic", "range": "USD 3,000 – 5,000", "desc": "Development and initial testing", "gpu": "1x RTX 4090" },
+      { "name": "Production", "range": "USD 15,000 – 25,000", "desc": "Medium clinic or hospital", "gpu": "2x A6000" },
+      { "name": "Enterprise", "range": "USD 80,000 – 150,000+", "desc": "Hospital network or institutional use", "gpu": "H100 80GB per node" }
+    ],
+    "timeline": "12 to 16 weeks from purchase to production"
+  },
+  "security": {
+    "title": "Designed for Compliance. Built to Protect.",
+    "items": [
+      "Full encryption at rest (LUKS2) and in transit (TLS 1.3)",
+      "Network segmented into 6 zones: DMZ, Admin, App, Data, GPU, Backup",
+      "OpenBSD firewall — the world's most secure operating system",
+      "Two-factor authentication (2FA)",
+      "Continuous monitoring with Prometheus, Grafana, and Wazuh SIEM"
+    ]
+  },
+  "benchmarks": {
+    "title": "Results That Speak for Themselves",
+    "subtitle": "Technical metrics validated in our testing environment.",
+    "items": [
+      { "metric": "80-85%", "desc": "Accuracy on standardized medical exams (USMLE)" },
+      { "metric": "< 5%", "desc": "Hallucination rate with RAG system implemented" },
+      { "metric": "< 10s", "desc": "P95 response time per clinical query" },
+      { "metric": "70B", "desc": "Model parameters running on a single RTX 4090" }
+    ],
+    "cta": "Book a demo"
+  },
+  "audience": {
+    "title": "Who is Pragma for?",
+    "subtitle": "If you see patients, Pragma enhances your practice.",
+    "items": ["Hospitals and clinics", "Diagnostic imaging centers", "Specialist networks", "Multi-specialty centers"]
+  },
+  "disclaimer": {
+    "text": "Pragma is a clinical support tool. It does not replace the judgment, experience, or responsibility of the medical professional. All clinical decisions are the responsibility of the treating physician."
   },
   "demo": {
-    "title": "Book a demo",
-    "subtitle": "Pragma is currently in Latin America. Coming to the US and Europe — leave your email.",
+    "title": "Book a Demo",
+    "subtitle": "Pragma is currently available in Latin America. Leave your contact and we'll show you how it fits your center.",
     "nombre": "Name",
     "especialidad": "Specialty",
-    "whatsapp": "Email",
+    "whatsapp": "WhatsApp",
     "nombrePlaceholder": "Your name",
     "especialidadPlaceholder": "e.g. Dentistry",
-    "whatsappPlaceholder": "your@email.com",
-    "cta": "Notify me when available",
-    "disclaimer": "Coming to the US and Europe. We'll keep you posted."
-  },
-  "registro": {
-    "text": "Already know Pragma and want to get started?",
-    "cta": "Access your center"
+    "whatsappPlaceholder": "11 5555-5555",
+    "cta": "Book a demo",
+    "disclaimer": "We'll contact you within 24 hours."
   },
   "footer": {
-    "location": "Latin America"
+    "text": "Latin America",
+    "disclaimer": "Pragma is a clinical support tool. It does not replace the medical professional."
   }
 }

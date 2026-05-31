@@ -1,0 +1,26 @@
+---
+import SectionTitle from '../atoms/SectionTitle.astro'
+import FeatureCard from '../molecules/FeatureCard.astro'
+
+export interface Props {
+  content: any
+}
+
+const { content } = Astro.props
+---
+
+<section id="gestion" class="section">
+  <div class="container">
+    <SectionTitle title={content.title} subtitle={content.subtitle} />
+    <div class="management-grid">
+      <div class="management-cards">
+        {content.features.map((feature: any) => (
+          <FeatureCard title={feature.title} desc={feature.desc} />
+        ))}
+      </div>
+      <div class="management-image">
+        <img src="/images/pragma_png2.png" alt="Practice management" class="section-img" />
+      </div>
+    </div>
+  </div>
+</section>

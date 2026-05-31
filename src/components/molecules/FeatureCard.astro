@@ -1,0 +1,13 @@
+---
+export interface Props {
+  title: string
+  desc: string
+}
+
+const { title, desc } = Astro.props
+---
+
+<div class="feature-card glass-card card-pad-lg">
+  <h3 class="feature-title">{title}</h3>
+  <p class="feature-desc">{desc}</p>
+</div>

@@ -1,0 +1,22 @@
+---
+import SectionTitle from '../atoms/SectionTitle.astro'
+import PricingCard from '../molecules/PricingCard.astro'
+
+export interface Props {
+  content: any
+}
+
+const { content } = Astro.props
+---
+
+<section id="deployment" class="section">
+  <div class="container">
+    <SectionTitle title={content.title} subtitle={content.subtitle} />
+    <div class="deployment-grid">
+      {content.tiers.map((tier: any) => (
+        <PricingCard name={tier.name} range={tier.range} desc={tier.desc} gpu={tier.gpu} />
+      ))}
+    </div>
+    <p class="timeline-text">{content.timeline}</p>
+  </div>
+</section>
