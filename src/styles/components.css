@@ -85,7 +85,8 @@
 }
 
 .section-hero {
-  padding-top: var(--space-3xl);
+  padding-top: calc(var(--space-3xl) * 1.25);
+  padding-bottom: var(--space-3xl);
 }
 
 .section-title {
@@ -210,10 +211,18 @@
   color: var(--text-primary);
   font-size: 1.1rem;
   transition: background 0.3s;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
 .theme-toggle:hover {
   background: rgba(255,255,255,0.15);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--electric-blue);
+  outline-offset: 2px;
 }
 
 /* ===== LANG TOGGLE ===== */
