@@ -12,10 +12,10 @@ const { content } = Astro.props
 <section class="section section-hero">
   <div class="container hero-grid">
     <div class="hero-text">
-      <Badge>{content.badge}</Badge>
-      <h1 class="hero-h1 hero-h1--es">{content.title1}<br /><span class="hero-highlight">{content.title2}</span></h1>
-      <p class="hero-description">{content.description}</p>
-      <div class="hero-ctas">
+      <div class="cer-item cer-item--1"><Badge>{content.badge}</Badge></div>
+      <h1 class="hero-h1 hero-h1--es cer-item cer-item--2">{content.title1}<br /><span class="hero-highlight">{content.title2}</span></h1>
+      <p class="hero-description cer-item cer-item--3">{content.description}</p>
+      <div class="hero-ctas cer-item cer-item--4">
         <a href="#demo" class="btn btn-primary">{content.ctaPrimary}</a>
         <a href="#arquitectura" class="btn btn-glass">{content.ctaSecondary}</a>
       </div>

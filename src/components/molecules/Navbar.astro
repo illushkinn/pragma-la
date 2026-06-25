@@ -8,12 +8,22 @@ const { content, lang } = Astro.props
 ---
 
 <nav class="navbar">
-  <img src="/images/pragma_png2.png" alt="Pragma" class="nav-logo nav-logo-dark" />
-  <img src="/images/pragma_logo.png" alt="Pragma" class="nav-logo nav-logo-light" />
-  <div class="nav-links">
-    <a href="#que-es" class="nav-link">{content.queEs}</a>
-    <a href="#ai" class="nav-link">{content.ai}</a>
-    <a href="#gestion" class="nav-link">{content.gestion}</a>
+  <div class="nav-left">
+    <a href="/" class="isologo" aria-label="Pragma">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="isologo-mark">
+        <rect x="1" y="1" width="30" height="30" rx="8" stroke="var(--electric-blue)" stroke-width="2.5"/>
+        <path d="M10 22V10h4.5a3.5 3.5 0 1 1 0 7H14v5" stroke="var(--electric-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M18 22V10h4.5a3.5 3.5 0 1 1 0 7H22v5" stroke="var(--electric-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="isologo-text">Pragma</span>
+    </a>
+    <div class="nav-links">
+      <a href="#que-es" class="nav-link">{content.queEs}</a>
+      <a href="#ai" class="nav-link">{content.ai}</a>
+      <a href="#gestion" class="nav-link">{content.gestion}</a>
+    </div>
+  </div>
+  <div class="nav-right">
     <div class="lang-toggle">
       {
         lang === 'es' ? (

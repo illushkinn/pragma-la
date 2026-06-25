@@ -104,14 +104,6 @@ img {
   background: rgba(0, 0, 58, 0.1);
 }
 
-[data-theme="light"] .nav-logo-dark {
-  display: none;
-}
-
-[data-theme="light"] .nav-logo-light {
-  display: block;
-}
-
 [data-theme="light"] .theme-toggle:hover {
   background: rgba(0,0,58,0.1);
 }

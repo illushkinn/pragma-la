@@ -30,6 +30,13 @@ Thumbs.db
 *.log
 npm-debug.log*
 
+# Agent configs (tool-agnostic — each AI tool manages its own)
+.claude/
+.cursor/
+.codex/
+.atl/
+ai-specs/
+
 # Test coverage
 coverage/
 
