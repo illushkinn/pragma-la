@@ -1,0 +1,219 @@
+/* ============================================
+   PRAGMA — Design Tokens (3-Layer Hardik Pandya)
+   ============================================
+   Layer 1: Primitives  (--ds-*)
+   Layer 2: Semantics   (--color-*, --space-*, etc.)
+   Layer 3: Overrides   (responsive / context)
+   ============================================ */
+
+/* ============================================
+   LAYER 1 — PRIMITIVES
+   ============================================ */
+:root {
+  /* ---- Brand Colors (OKLCH) ---- */
+  --ds-midnight-blue: oklch(0.138 0.096 264.1);
+  --ds-electric-blue: oklch(0.452 0.313 264.1);
+  --ds-electric-blue-hover: oklch(0.5 0.33 264.1);
+  --ds-electric-blue-muted: oklch(0.452 0.313 264.1 / 0.15);
+  --ds-mind-purple: oklch(0.467 0.216 302.4);
+  --ds-mind-purple-hover: oklch(0.52 0.23 302.4);
+  --ds-mind-purple-muted: oklch(0.467 0.216 302.4 / 0.15);
+
+  /* ---- Neutral Colors (OKLCH) ---- */
+  --ds-white: oklch(1 0 0);
+  --ds-white-glass: oklch(1 0 0 / 0.06);
+  --ds-white-glass-hover: oklch(1 0 0 / 0.1);
+  --ds-white-glass-active: oklch(1 0 0 / 0.14);
+  --ds-border-glass: oklch(1 0 0 / 0.1);
+  --ds-border-glass-hover: oklch(1 0 0 / 0.18);
+  --ds-text-primary: oklch(0.9 0.015 264.1);
+  --ds-text-secondary: oklch(0.55 0.03 264.1);
+  --ds-text-muted: oklch(0.4 0.03 264.1);
+  --ds-bg-card: oklch(0.16 0.025 264.1);
+  --ds-bg-elevated: oklch(0.2 0.03 264.1);
+  --ds-bg-input: oklch(0.12 0.025 264.1);
+
+  /* ---- Functional Colors ---- */
+  --ds-green: oklch(0.6 0.18 145);
+  --ds-red: oklch(0.6 0.18 25);
+  --ds-yellow: oklch(0.7 0.15 85);
+  --ds-whatsapp: oklch(0.65 0.15 140);
+
+  /* ---- Glass Effects ---- */
+  --ds-glass-1-bg: oklch(1 0 0 / 0.04);
+  --ds-glass-1-blur: 8px;
+  --ds-glass-1-border: 1px solid var(--ds-border-glass);
+
+  --ds-glass-2-bg: oklch(1 0 0 / 0.08);
+  --ds-glass-2-blur: 16px;
+  --ds-glass-2-border: 1px solid var(--ds-border-glass);
+
+  --ds-glass-3-bg: oklch(1 0 0 / 0.12);
+  --ds-glass-3-blur: 24px;
+  --ds-glass-3-border: 1px solid var(--ds-border-glass-hover);
+
+  /* ---- Spacing Scale (8-step) ---- */
+  --ds-space-0: 0px;
+  --ds-space-1: 4px;
+  --ds-space-2: 8px;
+  --ds-space-3: 12px;
+  --ds-space-4: 16px;
+  --ds-space-5: 24px;
+  --ds-space-6: 32px;
+  --ds-space-7: 48px;
+  --ds-space-8: 64px;
+  --ds-space-9: 96px;
+
+  /* ---- Typography ---- */
+  --ds-font-body: 'Inter', system-ui, sans-serif;
+  --ds-font-heading: 'Inter', system-ui, sans-serif;
+  --ds-font-mono: 'JetBrains Mono', monospace;
+
+  --ds-font-weight-regular: 400;
+  --ds-font-weight-medium: 500;
+  --ds-font-weight-semibold: 600;
+  --ds-font-weight-bold: 700;
+  --ds-font-weight-extrabold: 800;
+  --ds-font-weight-black: 900;
+
+  --ds-line-height-tight: 1.1;
+  --ds-line-height-body: 1.6;
+
+  --ds-letter-spacing-tight: -0.03em;
+  --ds-letter-spacing-wide: 0.1em;
+
+  /* ---- Border Radius ---- */
+  --ds-radius-sm: 6px;
+  --ds-radius-md: 12px;
+  --ds-radius-lg: 16px;
+  --ds-radius-xl: 24px;
+  --ds-radius-full: 9999px;
+
+  /* ---- Shadows ---- */
+  --ds-shadow-glass-sm: 0 2px 8px oklch(0 0 0 / 0.2);
+  --ds-shadow-glass-md: 0 4px 16px oklch(0 0 0 / 0.25);
+  --ds-shadow-glass-lg: 0 8px 32px oklch(0 0 0 / 0.3);
+  --ds-shadow-button: 0 4px 16px oklch(0.452 0.313 264.1 / 0.35);
+  --ds-shadow-button-hover: 0 6px 24px oklch(0.452 0.313 264.1 / 0.45);
+
+  /* ---- Z-Index Scale ---- */
+  --ds-z-base: 0;
+  --ds-z-content: 10;
+  --ds-z-nav: 100;
+  --ds-z-overlay: 200;
+  --ds-z-modal: 300;
+  --ds-z-toast: 400;
+
+  /* ---- Motion Tokens ---- */
+  --ds-duration-fast: 150ms;
+  --ds-duration-normal: 300ms;
+  --ds-duration-slow: 500ms;
+  --ds-easing-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ds-easing-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ds-easing-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ---- Transitions ---- */
+  --ds-transition-fast: var(--ds-duration-fast) var(--ds-easing-out);
+  --ds-transition-normal: var(--ds-duration-normal) var(--ds-easing-out);
+}
+
+/* ============================================
+   LAYER 2 — SEMANTICS
+   ============================================ */
+:root {
+  /* ---- Backgrounds ---- */
+  --color-bg: var(--ds-midnight-blue);
+  --color-bg-card: var(--ds-bg-card);
+  --color-bg-elevated: var(--ds-bg-elevated);
+  --color-bg-input: var(--ds-bg-input);
+
+  /* ---- Text ---- */
+  --color-text: var(--ds-text-primary);
+  --color-text-secondary: var(--ds-text-secondary);
+  --color-text-muted: var(--ds-text-muted);
+  --color-text-inverse: var(--ds-white);
+
+  /* ---- Brand ---- */
+  --color-primary: var(--ds-electric-blue);
+  --color-primary-hover: var(--ds-electric-blue-hover);
+  --color-primary-muted: var(--ds-electric-blue-muted);
+  --color-accent: var(--ds-mind-purple);
+  --color-accent-hover: var(--ds-mind-purple-hover);
+  --color-accent-muted: var(--ds-mind-purple-muted);
+
+  /* ---- Functional ---- */
+  --color-success: var(--ds-green);
+  --color-error: var(--ds-red);
+  --color-warning: var(--ds-yellow);
+  --color-whatsapp: var(--ds-whatsapp);
+
+  /* ---- Glass ---- */
+  --glass-bg: var(--ds-glass-2-bg);
+  --glass-blur: var(--ds-glass-2-blur);
+  --glass-border: var(--ds-glass-2-border);
+  --glass-shadow: var(--ds-shadow-glass-md);
+
+  --glass-1-bg: var(--ds-glass-1-bg);
+  --glass-1-blur: var(--ds-glass-1-blur);
+  --glass-1-border: var(--ds-glass-1-border);
+  --glass-1-shadow: var(--ds-shadow-glass-sm);
+
+  --glass-2-bg: var(--ds-glass-2-bg);
+  --glass-2-blur: var(--ds-glass-2-blur);
+  --glass-2-border: var(--ds-glass-2-border);
+  --glass-2-shadow: var(--ds-shadow-glass-md);
+
+  --glass-3-bg: var(--ds-glass-3-bg);
+  --glass-3-blur: var(--ds-glass-3-blur);
+  --glass-3-border: var(--ds-glass-3-border);
+  --glass-3-shadow: var(--ds-shadow-glass-lg);
+
+  /* ---- Spacing ---- */
+  --space-xs: var(--ds-space-1);
+  --space-sm: var(--ds-space-2);
+  --space-md: var(--ds-space-4);
+  --space-lg: var(--ds-space-5);
+  --space-xl: var(--ds-space-6);
+  --space-2xl: var(--ds-space-7);
+  --space-3xl: var(--ds-space-8);
+
+  /* ---- Typography ---- */
+  --font-body: var(--ds-font-body);
+  --font-heading: var(--ds-font-heading);
+  --font-mono: var(--ds-font-mono);
+
+  /* ---- Radius ---- */
+  --radius-sm: var(--ds-radius-sm);
+  --radius-md: var(--ds-radius-md);
+  --radius-lg: var(--ds-radius-lg);
+  --radius-xl: var(--ds-radius-xl);
+  --radius-full: var(--ds-radius-full);
+
+  /* ---- Shadows ---- */
+  --shadow-card: var(--ds-shadow-glass-md);
+  --shadow-button: var(--ds-shadow-button);
+  --shadow-button-hover: var(--ds-shadow-button-hover);
+
+  /* ---- Motion ---- */
+  --transition-fast: var(--ds-transition-fast);
+  --transition-normal: var(--ds-transition-normal);
+}
+
+/* ============================================
+   LAYER 3 — RESPONSIVE OVERRIDES
+   ============================================ */
+@media (max-width: 639px) {
+  :root {
+    --space-lg: var(--ds-space-4);
+    --space-xl: var(--ds-space-5);
+    --space-2xl: var(--ds-space-6);
+    --space-3xl: var(--ds-space-7);
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  :root {
+    --space-2xl: var(--ds-space-5);
+    --space-3xl: var(--ds-space-6);
+  }
+}

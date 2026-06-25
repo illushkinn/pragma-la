@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40">
+  <text x="0" y="30" font-family="system-ui, sans-serif" font-weight="800" font-size="28" fill="#FFFFFF" letter-spacing="-0.03em">Pragma</text>
+  <rect x="0" y="38" width="24" height="2" rx="1" fill="rgba(0,0,255,0.5)"/>
+  <rect x="28" y="38" width="8" height="2" rx="1" fill="rgba(123,47,190,0.4)"/>
+</svg>

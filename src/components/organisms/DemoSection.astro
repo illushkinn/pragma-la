@@ -1,4 +1,5 @@
 ---
+import Illustration from '../atoms/Illustration.astro'
 import GlassCard from '../atoms/GlassCard.astro'
 import DemoForm from '../molecules/DemoForm.astro'
 
@@ -13,7 +14,7 @@ const { content } = Astro.props
   <div class="container" style="max-width:960px;">
     <div class="demo-grid">
       <div class="demo-image">
-        <img src="/images/pragma_png5.png" alt="Book a demo" class="section-img" />
+        <Illustration name="demo" alt="Book a demo" class="section-img" width={600} height={400} />
       </div>
       <GlassCard padding="xl">
         <h2 class="demo-title">{content.title}</h2>

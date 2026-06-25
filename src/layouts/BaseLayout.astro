@@ -1,29 +1,29 @@
 ---
+import '../styles/tokens.css'
 import '../styles/brand.css'
+import '../styles/components.css'
+import Seo from '../components/Seo.astro'
 
 export interface Props {
   title: string
   description: string
   ogImage?: string
   lang?: string
+  jsonLd?: Record<string, unknown>
 }
 
-const { title, description, ogImage = '/og-image.svg', lang = 'es' } = Astro.props
+const { title, description, ogImage = '/og-image.svg', lang = 'es', jsonLd } = Astro.props
 ---
 
 <!DOCTYPE html>
 <html lang={lang}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#00003A" />
 
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={ogImage} />
-    <meta property="og:type" content="website" />
-
-    <meta name="twitter:card" content="summary_large_image" />
+    <Seo {title} {description} lang={lang} image={ogImage} {jsonLd} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,9 +31,7 @@ const { title, description, ogImage = '/og-image.svg', lang = 'es' } = Astro.pro
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,700,401&display=swap" rel="stylesheet" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="canonical" href="https://pragma.med" />
-
-    <title>{title}</title>
+    <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
   <body>
     <slot />

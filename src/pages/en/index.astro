@@ -20,9 +20,38 @@ import FooterSection from '../../components/organisms/FooterSection.astro'
 const title = 'Pragma — Private Clinical Intelligence for Healthcare Centers in Latin America'
 const description = 'Clinical chatbot, medical image analysis, and differential diagnosis. 100% on-premise, open source.'
 const currentLang = 'en'
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "Pragma",
+  description,
+  url: "https://pragma.med",
+  applicationCategory: "MedicalSoftware",
+  offers: {
+    "@type": "Offer",
+    price: "3000",
+    priceCurrency: "USD",
+    priceValidUntil: "2027-12-31",
+    availability: "https://schema.org/InStock",
+  },
+  manufacturer: {
+    "@type": "Organization",
+    name: "Pragma",
+    url: "https://pragma.med",
+    address: { "@type": "PostalAddress", addressCountry: "AR" },
+  },
+  about: {
+    "@type": "Thing",
+    name: "Clinical AI",
+    description: "Medical AI platform for clinical decision support, imaging, and patient management.",
+  },
+  abstract: "Pragma is an on-premise clinical intelligence platform for healthcare centers. It includes an evidence-based clinical chatbot, medical image analysis, literature processing, and differential diagnosis. 100% on your infrastructure, open source, HIPAA/GDPR.",
+  keywords: ["clinical intelligence", "medical AI", "clinical chatbot", "image analysis", "differential diagnosis", "on-premise", "open source", "healthcare", "Latin America"],
+}
 ---
 
-<BaseLayout {title} {description} lang={currentLang}>
+<BaseLayout {title} {description} lang={currentLang} {jsonLd}>
   <Navbar content={content.nav} lang={currentLang} />
   <HeroSection content={content.hero} />
   <AiCapabilities content={content.ai} />

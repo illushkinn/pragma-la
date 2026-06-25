@@ -1,0 +1,36 @@
+---
+interface Props {
+  name: string;
+  alt?: string;
+  decorative?: boolean;
+  loading?: 'lazy' | 'eager';
+  class?: string;
+  width?: number;
+  height?: number;
+}
+
+const {
+  name,
+  alt,
+  decorative = false,
+  loading = 'lazy',
+  class: className,
+  width = 600,
+  height = 400,
+} = Astro.props;
+
+const src = `/illustrations/${name}.svg`;
+const aspectRatio = width / height;
+---
+
+<img
+  src={src}
+  alt={decorative ? '' : (alt ?? name)}
+  role={decorative ? 'presentation' : undefined}
+  {loading}
+  decoding="async"
+  {width}
+  {height}
+  style={`aspect-ratio: ${aspectRatio}; max-width: 100%; height: auto;`}
+  class={className}
+/>

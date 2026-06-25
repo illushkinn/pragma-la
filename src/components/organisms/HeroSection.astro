@@ -1,4 +1,5 @@
 ---
+import Illustration from '../atoms/Illustration.astro'
 import Badge from '../atoms/Badge.astro'
 
 export interface Props {
@@ -20,7 +21,7 @@ const { content } = Astro.props
       </div>
     </div>
     <div class="hero-image">
-      <img src="/images/pragma_png1.png" alt="Pragma AI dashboard" class="hero-img" />
+      <Illustration name="hero" alt="Pragma AI dashboard" class="hero-img" width={600} height={400} />
     </div>
   </div>
 </section>
