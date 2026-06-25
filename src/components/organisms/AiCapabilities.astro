@@ -1,38 +1,84 @@
 ---
-import Illustration from '../atoms/Illustration.astro'
 import SectionTitle from '../atoms/SectionTitle.astro'
-import CapabilityCard from '../molecules/CapabilityCard.astro'
-import StepCard from '../molecules/StepCard.astro'
+
+interface Capability {
+  title: string
+  desc: string
+  iconSrc: string
+}
+
+interface Step {
+  number: string
+  title: string
+  text: string
+}
 
 export interface Props {
-  content: any
+  content: {
+    title: string
+    subtitle: string
+    capabilities: Capability[]
+    howItWorksTitle: string
+    steps: Step[]
+  }
 }
 
 const { content } = Astro.props
+const [chatbot, imaging, literature, dxDiff] = content.capabilities
+const steps = content.steps
 ---
 
 <section id="ai" class="section">
   <div class="container">
     <SectionTitle title={content.title} subtitle={content.subtitle} />
-    <div class="capability-grid">
-      {content.capabilities.map((cap: any) => (
-        <CapabilityCard title={cap.title} desc={cap.desc} iconSrc={cap.iconSrc} />
-      ))}
-    </div>
-  </div>
-</section>
 
-<section class="section section-steps">
-  <div class="container">
-    <SectionTitle title={content.howItWorksTitle} subtitle={content.howItWorksSubtitle} />
-    <div class="steps-container">
-      <div class="steps-list">
-        {content.steps.map((step: any) => (
-          <StepCard number={step.number} title={step.title} text={step.text} />
-        ))}
-      </div>
-      <div class="steps-image">
-        <Illustration name="workflow" alt="Pragma workflow" class="section-img" width={600} height={400} />
+    <!-- Bento Grid -->
+    <div class="bento-grid">
+      <!-- Chatbot → prominent (2 rows) -->
+      <article class="bento-item bento-item--chatbot glass-card card-pad-xl">
+        <img src={chatbot.iconSrc} alt="" class="capability-icon" />
+        <h3 class="capability-title">{chatbot.title}</h3>
+        <p class="capability-desc">{chatbot.desc}</p>
+      </article>
+
+      <!-- Diagnóstico Diferencial -->
+      <article class="bento-item bento-item--dx glass-card card-pad-xl">
+        <img src={dxDiff.iconSrc} alt="" class="capability-icon" />
+        <h3 class="capability-title">{dxDiff.title}</h3>
+        <p class="capability-desc">{dxDiff.desc}</p>
+      </article>
+
+      <!-- Análisis de Imágenes -->
+      <article class="bento-item bento-item--imaging glass-card card-pad-xl">
+        <img src={imaging.iconSrc} alt="" class="capability-icon" />
+        <h3 class="capability-title">{imaging.title}</h3>
+        <p class="capability-desc">{imaging.desc}</p>
+      </article>
+
+      <!-- Procesamiento de Literatura → full width -->
+      <article class="bento-item bento-item--lit glass-card card-pad-xl">
+        <img src={literature.iconSrc} alt="" class="capability-icon" />
+        <h3 class="capability-title">{literature.title}</h3>
+        <p class="capability-desc">{literature.desc}</p>
+      </article>
+    </div>
+
+    <!-- Steps Flow (compacto) -->
+    <div class="steps-flow">
+      {steps.slice(0, -1).map((step: Step) => (
+        <>
+          <div class="step-dot">
+            <span class="step-dot-num">{step.number}</span>
+            <span class="step-dot-label">{step.title}</span>
+          </div>
+          <svg class="step-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5">
+            <path d="M6 4l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </>
+      ))}
+      <div class="step-dot step-dot--last">
+        <span class="step-dot-num">{steps[steps.length - 1].number}</span>
+        <span class="step-dot-label">{steps[steps.length - 1].title}</span>
       </div>
     </div>
   </div>
