@@ -83,8 +83,8 @@
 }
 
 .section-hero {
-  padding-top: calc(var(--space-3xl) * 1.25);
-  padding-bottom: var(--space-3xl);
+  padding-top: calc(var(--space-3xl) * 0.6);
+  padding-bottom: var(--space-2xl);
 }
 
 .section-title {
