@@ -14,7 +14,7 @@ const { content } = Astro.props
     <SectionTitle title={content.title} subtitle={content.subtitle} />
     <div class="why-private-grid">
       {content.items.map((item: any) => (
-        <GlassCard padding="xl" textAlign="center">
+        <GlassCard padding="lg" textAlign="center">
           <h3 class="why-title">{item.title}</h3>
           <p class="why-desc">{item.desc}</p>
         </GlassCard>

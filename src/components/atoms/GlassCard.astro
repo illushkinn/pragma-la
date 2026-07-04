@@ -1,13 +1,13 @@
 ---
 export interface Props {
-  padding?: 'sm' | 'md' | 'lg' | 'xl'
+  padding?: 'default' | 'lg'
   textAlign?: 'left' | 'center'
   children?: any
 }
 
-const { padding = 'lg', textAlign = 'left', children } = Astro.props
+const { padding = 'default', textAlign = 'left', children } = Astro.props
 ---
 
-<div class={`glass-card card-pad-${padding} card-align-${textAlign}`}>
+<div class={`glass-card card-pad${padding === 'lg' ? '-lg' : ''} card-align-${textAlign}`}>
   <slot />
 </div>

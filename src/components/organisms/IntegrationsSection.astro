@@ -14,7 +14,7 @@ const { content } = Astro.props
     <SectionTitle title={content.title} subtitle={content.subtitle} />
     <div class="integrations-grid">
       {content.items.map((item: any) => (
-        <GlassCard padding="lg" textAlign="center">
+        <GlassCard textAlign="center">
           <h3 class="integration-title">{item.title}</h3>
           <p class="integration-desc">{item.desc}</p>
         </GlassCard>

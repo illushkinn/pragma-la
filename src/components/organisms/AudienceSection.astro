@@ -14,7 +14,7 @@ const { content } = Astro.props
     <SectionTitle title={content.title} subtitle={content.subtitle} />
     <div class="audience-grid">
       {content.items.map((item: string) => (
-        <GlassCard padding="md" textAlign="center">
+        <GlassCard textAlign="center">
           <p class="audience-item">{item}</p>
         </GlassCard>
       ))}

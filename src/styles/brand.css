@@ -100,8 +100,9 @@ img {
 }
 
 /* ===== DATA THEME OVERRIDES FOR COMPONENTS ===== */
-[data-theme="light"] .btn-glass:hover {
-  background: rgba(0, 0, 58, 0.1);
+[data-theme="light"] .btn-outline:hover {
+  background: var(--electric-blue);
+  color: var(--clear-white);
 }
 
 [data-theme="light"] .theme-toggle:hover {
