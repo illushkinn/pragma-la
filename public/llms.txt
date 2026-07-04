@@ -1,0 +1,38 @@
+# Pragma — Inteligencia clínica privada
+> Pragma construye infraestructura de software médico privada, auditable y soberana para centros de salud en LATAM. 100% on-premise, open source. Comenzando por Oberá, Misiones, Argentina.
+
+## Qué ofrece Pragma
+- **Chatbot Clínico**: Preguntas médicas con evidencia y citas automáticas
+- **Análisis de Imágenes**: Interpreta radiografías, TACs y resonancias con IA
+- **Procesamiento de Literatura**: Resume papers y guías clínicas al instante
+- **Diagnóstico Diferencial**: Sugiere diagnósticos basados en síntomas y laboratorio
+
+## Stack técnico
+- Frontend: Astro (SSG), componentes atómicos, CSS con OKLCH
+- Backend: Supabase (PostgreSQL con RLS), Keycloak (OAuth2/OIDC), n8n (automatizaciones)
+- IA: vLLM en infraestructura propia, modelo 70B en RTX 4090
+- Seguridad: TLS 1.3, LUKS2, pfSense, hardening CIS, auditoría con Prometheus/Grafana/Loki/Wazuh
+- Infraestructura: On-premise, red segmentada en DMZ/Admin/App/Data/GPU/Backup
+
+## Para quién es
+- Hospitales y clínicas
+- Centros de diagnóstico por imágenes
+- Redes de especialistas
+- Policonsultorios
+
+## Seguridad y compliance
+- Ley 25.326 Argentina (datos personales de pacientes)
+- HIPAA y GDPR como referencia
+- Datos nunca salen de la infraestructura del cliente
+- Sin dependencia de APIs externas para datos clínicos
+- Hardening nivel producción con Lynis + OpenSCAP > 85 CIS
+
+## Ubicación
+Oberá, Misiones, Argentina — región EU para datos (Supabase), servidores propios para inferencia y datos clínicos.
+
+## Pricing
+Desde USD 3.000/mes por centro. On-premise, sin costos recurrentes de API.
+
+## Links
+- Web: https://pragma-gules.vercel.app
+- Contacto: sección Demo en el sitio

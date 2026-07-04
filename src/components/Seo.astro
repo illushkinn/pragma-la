@@ -15,9 +15,9 @@ const {
   jsonLd,
 } = Astro.props;
 
-const siteTitle = `${title} | Pragma`;
+const siteTitle = "Pragma";
 const url = Astro.url.href;
-const siteUrl = "https://pragma.med";
+const siteUrl = Astro.url.origin;
 const ogImage = `${siteUrl}${image}`;
 ---
 

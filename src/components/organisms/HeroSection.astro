@@ -14,9 +14,8 @@ const { content } = Astro.props
     <div class="hero-text">
       <div class="cer-item cer-item--1"><Badge>{content.badge}</Badge></div>
       <h1 class="hero-h1 cer-item cer-item--2">
-        <span class="hero-brutalist-xl">{content.title1.split(' ')[0]}</span><br />
-        <span class="hero-brutalist-md">{content.title1.split(' ').slice(1).join(' ')}</span><br />
-        <span class="hero-highlight">{content.title2}</span>
+        <span class="hero-maintext">{content.title1}</span>
+        <span class="hero-maintext">{content.title2}</span>
       </h1>
       <p class="hero-description cer-item cer-item--3">{content.description}</p>
       <div class="hero-ctas cer-item cer-item--4">
@@ -25,7 +24,7 @@ const { content } = Astro.props
       </div>
     </div>
     <div class="hero-image">
-      <Illustration name="hero" alt="Pragma AI dashboard" class="hero-img" width={600} height={400} />
+      <Illustration name="hero" alt="Pragma AI dashboard" class="hero-img" width={600} height={400} loading="eager" fetchpriority="high" />
     </div>
   </div>
 </section>

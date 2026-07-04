@@ -20,34 +20,77 @@ import FooterSection from '../../components/organisms/FooterSection.astro'
 const title = 'Pragma — Private Clinical Intelligence for Healthcare Centers in Latin America'
 const description = 'Clinical chatbot, medical image analysis, and differential diagnosis. 100% on-premise, open source.'
 const currentLang = 'en'
+const siteUrl = Astro.url.origin
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Product",
-  name: "Pragma",
-  description,
-  url: "https://pragma.med",
-  applicationCategory: "MedicalSoftware",
-  offers: {
-    "@type": "Offer",
-    price: "3000",
-    priceCurrency: "USD",
-    priceValidUntil: "2027-12-31",
-    availability: "https://schema.org/InStock",
-  },
-  manufacturer: {
-    "@type": "Organization",
-    name: "Pragma",
-    url: "https://pragma.med",
-    address: { "@type": "PostalAddress", addressCountry: "AR" },
-  },
-  about: {
-    "@type": "Thing",
-    name: "Clinical AI",
-    description: "Medical AI platform for clinical decision support, imaging, and patient management.",
-  },
-  abstract: "Pragma is an on-premise clinical intelligence platform for healthcare centers. It includes an evidence-based clinical chatbot, medical image analysis, literature processing, and differential diagnosis. 100% on your infrastructure, open source, HIPAA/GDPR.",
-  keywords: ["clinical intelligence", "medical AI", "clinical chatbot", "image analysis", "differential diagnosis", "on-premise", "open source", "healthcare", "Latin America"],
+  "@graph": [
+    {
+      "@type": "WebSite",
+      name: "Pragma",
+      url: siteUrl,
+      description,
+      inLanguage: "en",
+      about: {
+        "@type": "Thing",
+        name: "Private Clinical Intelligence",
+        description: "On-premise medical AI platform for healthcare centers in Latin America"
+      },
+      keywords: ["clinical intelligence", "medical AI", "clinical chatbot", "image analysis", "differential diagnosis", "on-premise", "open source", "healthcare", "Latin America"],
+      applicationCategory: "MedicalSoftware",
+      audience: {
+        "@type": "Audience",
+        audienceType: "Healthcare centers, clinics, hospitals, specialist networks, diagnostic imaging centers"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "Pragma",
+      description,
+      url: siteUrl,
+      applicationCategory: "MedicalSoftware",
+      operatingSystem: "Linux",
+      offers: {
+        "@type": "Offer",
+        price: "3000",
+        priceCurrency: "USD",
+        priceValidUntil: "2027-12-31",
+        availability: "https://schema.org/InStock"
+      },
+      author: {
+        "@type": "Organization",
+        name: "Pragma",
+        url: siteUrl,
+        address: { "@type": "PostalAddress", addressCountry: "AR", addressLocality: "Oberá", addressRegion: "Misiones" }
+      },
+      featureList: [
+        "Clinical chatbot with evidence and automatic citations",
+        "Medical image analysis (X-rays, CT scans, MRIs)",
+        "Medical literature processing",
+        "Differential diagnosis based on symptoms",
+        "100% on-premise on your infrastructure",
+        "Auditable open source",
+        "TLS 1.3 encryption, LUKS2, Keycloak SSO",
+        "CIS production-level hardening"
+      ],
+      memoryRequirements: "RTX 4090 or higher, 64GB RAM recommended",
+      softwareVersion: "0.1.0",
+      countryOfOrigin: "AR"
+    },
+    {
+      "@type": "WebPage",
+      name: title,
+      description,
+      url: siteUrl,
+      inLanguage: "en",
+      isPartOf: { "@type": "WebSite", name: "Pragma", url: siteUrl },
+      about: {
+        "@type": "Thing",
+        name: "Private Clinical Intelligence",
+        description: "Pragma builds private, auditable, sovereign medical software infrastructure for healthcare centers in LATAM, starting from Oberá, Misiones, Argentina."
+      }
+    }
+  ]
 }
 ---
 

@@ -7,21 +7,94 @@ export interface Props {
 }
 
 const { content } = Astro.props
+
+function parseMetric(metric: string): { prefix: string; number: string; suffix: string } {
+  const match = metric.match(/^([^\d]*)(\d+[\d\-,.]*)(.*)$/)
+  if (!match) return { prefix: '', number: metric, suffix: '' }
+  return { prefix: match[1], number: match[2], suffix: match[3] }
+}
 ---
 
 <section id="resultados" class="section">
   <div class="container">
     <SectionTitle title={content.title} subtitle={content.subtitle} />
     <div class="benchmark-grid">
-      {content.items.map((item: any) => (
-        <GlassCard padding="lg" textAlign="center">
-          <p class="benchmark-metric">{item.metric}</p>
-          <p class="benchmark-desc">{item.desc}</p>
-        </GlassCard>
-      ))}
+      {content.items.map((item: any, i: number) => {
+        const { prefix, number, suffix } = parseMetric(item.metric)
+        return (
+          <div class="benchmark-card" data-metric={number} style={`animation-delay: ${i * 0.15}s`}>
+            <GlassCard padding="lg" textAlign="center">
+              <p class="benchmark-metric">
+                {prefix && <span class="metric-prefix">{prefix}</span>}
+                {number && <span class="metric-num">{number}</span>}
+                {suffix && <span class="metric-suffix">{suffix}</span>}
+              </p>
+              <p class="benchmark-desc">{item.desc}</p>
+            </GlassCard>
+          </div>
+        )
+      })}
     </div>
     <div style="text-align:center;margin-top:var(--space-xl);">
       <a href="#demo" class="btn btn-primary">{content.cta}</a>
     </div>
   </div>
 </section>
+
+<script>
+  function animateMetrics() {
+    const cards = document.querySelectorAll('.benchmark-card')
+    if (!cards.length) return
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return
+
+        const card = entry.target
+        const numEl = card.querySelector('.metric-num')
+        if (!numEl) { observer.unobserve(card); return }
+
+        const raw = card.dataset.metric
+        // Skip ranges and inequalities — just reveal
+        if (raw.includes('-') || raw.includes('<') || raw.includes('>')) {
+          numEl.style.opacity = '1'
+          observer.unobserve(card)
+          return
+        }
+
+        const target = parseInt(raw.replace(/[,.\s]/g, ''), 10)
+        if (isNaN(target)) { observer.unobserve(card); return }
+
+        const duration = 1200
+        const start = performance.now()
+
+        function update(now) {
+          const elapsed = now - start
+          const progress = Math.min(elapsed / duration, 1)
+          const eased = 1 - Math.pow(1 - progress, 3)
+          const current = Math.floor(eased * target)
+
+          const suffix = raw.replace(/[\d]/g, '')
+          numEl.textContent = current + suffix
+
+          if (progress < 1) {
+            requestAnimationFrame(update)
+          } else {
+            numEl.textContent = raw
+          }
+        }
+
+        requestAnimationFrame(update)
+        observer.unobserve(card)
+      })
+    }, { threshold: 0.3 })
+
+    cards.forEach(card => observer.observe(card))
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', animateMetrics)
+  } else {
+    animateMetrics()
+  }
+</script>

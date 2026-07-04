@@ -4,6 +4,7 @@ interface Props {
   alt?: string;
   decorative?: boolean;
   loading?: 'lazy' | 'eager';
+  fetchpriority?: 'high' | 'low' | 'auto';
   class?: string;
   width?: number;
   height?: number;
@@ -14,6 +15,7 @@ const {
   alt,
   decorative = false,
   loading = 'lazy',
+  fetchpriority,
   class: className,
   width = 600,
   height = 400,
@@ -28,6 +30,7 @@ const aspectRatio = width / height;
   alt={decorative ? '' : (alt ?? name)}
   role={decorative ? 'presentation' : undefined}
   {loading}
+  {fetchpriority}
   decoding="async"
   {width}
   {height}

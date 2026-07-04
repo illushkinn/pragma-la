@@ -7,38 +7,32 @@ export interface Props {
 const { content, lang } = Astro.props
 ---
 
-<nav class="navbar">
-  <div class="nav-left">
+<nav class="navbar" aria-label="Navegación principal">
+  <div class="nav-row">
     <a href="/" class="isologo" aria-label="Pragma">
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="isologo-mark">
-        <rect x="1" y="1" width="30" height="30" rx="8" stroke="var(--electric-blue)" stroke-width="2.5"/>
-        <path d="M10 22V10h4.5a3.5 3.5 0 1 1 0 7H14v5" stroke="var(--electric-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M18 22V10h4.5a3.5 3.5 0 1 1 0 7H22v5" stroke="var(--electric-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <span class="isologo-text">Pragma</span>
+      <img src="/images/pragma_png2_dark-mode.png" alt="Pragma" class="isologo-mark" />
     </a>
-    <div class="nav-links">
-      <a href="#que-es" class="nav-link">{content.queEs}</a>
-      <a href="#ai" class="nav-link">{content.ai}</a>
-      <a href="#gestion" class="nav-link">{content.gestion}</a>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        {
+          lang === 'es' ? (
+            <>
+              <span class="lang-btn active">{content.langEs}</span>
+              <a href="/en/" class="lang-btn">{content.langEn}</a>
+            </>
+          ) : (
+            <>
+              <a href="/" class="lang-btn">{content.langEs}</a>
+              <span class="lang-btn active">{content.langEn}</span>
+            </>
+          )
+        }
+      </div>
     </div>
   </div>
-  <div class="nav-right">
-    <div class="lang-toggle">
-      {
-        lang === 'es' ? (
-          <>
-            <span class="lang-btn active">{content.langEs}</span>
-            <a href="/en/" class="lang-btn">{content.langEn}</a>
-          </>
-        ) : (
-          <>
-            <a href="/" class="lang-btn">{content.langEs}</a>
-            <span class="lang-btn active">{content.langEn}</span>
-          </>
-        )
-      }
-    </div>
-
+  <div class="nav-links">
+    <a href="#que-es" class="nav-link">{content.queEs}</a>
+    <a href="#ai" class="nav-link">{content.ai}</a>
+    <a href="#gestion" class="nav-link">{content.gestion}</a>
   </div>
 </nav>
