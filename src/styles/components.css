@@ -55,7 +55,6 @@
 
 .btn-primary:hover {
   background: #0000CC;
-  transform: translateY(-2px);
   box-shadow: 0 6px 24px rgba(0,0,255,0.5);
 }
 
@@ -69,7 +68,6 @@
 .btn-outline:hover {
   background: var(--electric-blue);
   color: var(--clear-white);
-  transform: translateY(-2px);
 }
 
 .btn-full {
@@ -128,17 +126,27 @@
 }
 
 .hero-h1 {
-  font-size: 3rem;
   margin-bottom: var(--space-lg);
-  line-height: 1.05;
-}
-
-.hero-h1--es {
-  font-size: 3rem;
 }
 
 .hero-highlight {
-  color: var(--electric-blue);
+  color: var(--clear-white);
+  font-style: italic;
+}
+
+.hero-brutalist-xl {
+  font-size: 4.5rem;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  display: block;
+}
+
+.hero-brutalist-md {
+  font-size: 2.25rem;
+  line-height: 1.1;
+  font-weight: 400;
+  display: block;
+  margin-top: 0.25rem;
 }
 
 .hero-description {
@@ -226,62 +234,31 @@
   color: var(--text-primary);
 }
 
-/* ===== THEME TOGGLE ===== */
-.theme-toggle {
-  background: var(--surface-glass);
-  border: var(--glass-border);
-  border-radius: var(--radius-pill);
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: var(--text-primary);
-  font-size: 1.1rem;
-  transition: background 0.3s;
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
-  user-select: none;
-}
-
-.theme-toggle:hover {
-  background: rgba(255,255,255,0.15);
-}
-
-.theme-toggle:focus-visible {
-  outline: 2px solid var(--electric-blue);
-  outline-offset: 2px;
-}
-
 /* ===== LANG TOGGLE ===== */
 .lang-toggle {
   display: flex;
-  gap: 2px;
-  background: var(--surface-glass);
-  border: var(--glass-border);
-  border-radius: var(--radius-pill);
-  overflow: hidden;
+  gap: 4px;
+  align-items: center;
 }
 
 .lang-btn {
-  padding: 6px 12px;
+  padding: 4px 8px;
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 500;
   cursor: pointer;
   border: none;
   background: transparent;
   color: var(--text-secondary);
-  transition: background 0.3s, color 0.3s;
+  transition: color 0.3s;
   font-family: var(--font-body);
   text-decoration: none;
   display: inline-block;
 }
 
 .lang-btn.active {
-  background: var(--electric-blue);
-  color: var(--clear-white);
-  border-radius: var(--radius-pill);
+  color: var(--electric-blue);
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .lang-btn:not(.active):hover {
@@ -700,8 +677,7 @@
 @media (max-width: 768px) {
   .section { padding: var(--space-2xl) 0; }
   .section-title { font-size: 1.75rem; }
-  .hero-h1 { font-size: 2.25rem; }
-  .hero-h1--es { font-size: 2.25rem; }
+
   .hero-grid,
   .management-grid,
   .demo-grid {
@@ -767,8 +743,7 @@
   .audience-grid {
     grid-template-columns: 1fr !important;
   }
-  .hero-h1 { font-size: 1.75rem; }
-  .hero-h1--es { font-size: 1.75rem; }
+
   .hero-ctas {
     flex-wrap: nowrap;
   }
