@@ -70,7 +70,6 @@
 .btn-outline {
   background: transparent;
   color: var(--color-primary-hover);
-  border: 1px solid var(--color-primary-hover);
   transition: background 0.3s, color 0.3s;
 }
 
