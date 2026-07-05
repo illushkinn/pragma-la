@@ -17,13 +17,13 @@ const { content, lang } = Astro.props
         {
           lang === 'es' ? (
             <>
-              <span class="lang-btn active">{content.langEs}</span>
+              <a href="/" class="lang-btn active" aria-current="page">{content.langEs}</a>
               <a href="/en/" class="lang-btn">{content.langEn}</a>
             </>
           ) : (
             <>
               <a href="/" class="lang-btn">{content.langEs}</a>
-              <span class="lang-btn active">{content.langEn}</span>
+              <a href="/en/" class="lang-btn active" aria-current="page">{content.langEn}</a>
             </>
           )
         }

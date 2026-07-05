@@ -35,7 +35,10 @@ const { title, description, ogImage = '/og-image.svg', lang = 'es', jsonLd } = A
     <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
   <body>
-    <slot />
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <main id="main-content">
+      <slot />
+    </main>
     <script>
       (function() {
         var theme = localStorage.getItem('pragma-theme');
@@ -43,18 +46,6 @@ const { title, description, ogImage = '/og-image.svg', lang = 'es', jsonLd } = A
           document.documentElement.setAttribute('data-theme', 'light');
         }
       })();
-      window.__toggleTheme = function() {
-        var html = document.documentElement;
-        var current = html.getAttribute('data-theme');
-        var next = current === 'light' ? '' : 'light';
-        if (next) {
-          html.setAttribute('data-theme', 'light');
-          localStorage.setItem('pragma-theme', 'light');
-        } else {
-          html.removeAttribute('data-theme');
-          localStorage.removeItem('pragma-theme');
-        }
-      };
     </script>
   </body>
 </html>
