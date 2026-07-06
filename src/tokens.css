@@ -102,6 +102,7 @@
   --text-secondary:  var(--color-text-muted);
   --surface-glass:   var(--glass-bg);
   --border-glass:    var(--ds-glass-border);
+  --surface-card:    oklch(0.18 0.02 250);
 }
 
 /* =============================================
@@ -126,6 +127,8 @@
 
   --glass-bg: oklch(0.169 0.104 281.1 / 0.05);
   --glass-border: 1px solid oklch(0.169 0.104 281.1 / 0.1);
+
+  --surface-card:   oklch(0.95 0.01 250);
 
   --shadow-glass:  0 8px 32px oklch(0 0 0 / 0.08);
   --shadow-card:   0 4px 24px oklch(0.169 0.104 281.1 / 0.1);

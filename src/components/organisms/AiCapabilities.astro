@@ -36,28 +36,28 @@ const steps = content.steps
     <div class="bento-grid">
       <!-- Chatbot → prominent (2 rows) -->
       <article class="bento-item bento-item--chatbot glass-card card-pad-lg">
-        <img src={chatbot.iconSrc} alt="" class="capability-icon" />
+        <img src={chatbot.iconSrc} alt={chatbot.title} width="144" height="144" class="capability-icon" />
         <h3 class="capability-title">{chatbot.title}</h3>
         <p class="capability-desc">{chatbot.desc}</p>
       </article>
 
       <!-- Diagnóstico Diferencial -->
-      <article class="bento-item bento-item--dx glass-card card-pad-lg">
-        <img src={dxDiff.iconSrc} alt="" class="capability-icon" />
+      <article class="bento-item bento-item--dx solid-card card-pad-lg">
+        <img src={dxDiff.iconSrc} alt={dxDiff.title} width="144" height="144" class="capability-icon" />
         <h3 class="capability-title">{dxDiff.title}</h3>
         <p class="capability-desc">{dxDiff.desc}</p>
       </article>
 
       <!-- Análisis de Imágenes -->
-      <article class="bento-item bento-item--imaging glass-card card-pad-lg">
-        <img src={imaging.iconSrc} alt="" class="capability-icon" />
+      <article class="bento-item bento-item--imaging solid-card card-pad-lg">
+        <img src={imaging.iconSrc} alt={imaging.title} width="144" height="144" class="capability-icon" />
         <h3 class="capability-title">{imaging.title}</h3>
         <p class="capability-desc">{imaging.desc}</p>
       </article>
 
       <!-- Procesamiento de Literatura → full width -->
-      <article class="bento-item bento-item--lit glass-card card-pad-lg">
-        <img src={literature.iconSrc} alt="" class="capability-icon" />
+      <article class="bento-item bento-item--lit solid-card card-pad-lg">
+        <img src={literature.iconSrc} alt={literature.title} width="144" height="144" class="capability-icon" />
         <h3 class="capability-title">{literature.title}</h3>
         <p class="capability-desc">{literature.desc}</p>
       </article>

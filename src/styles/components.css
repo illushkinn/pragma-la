@@ -20,6 +20,14 @@
   transition: background 0.3s, border-color 0.3s;
 }
 
+/* ===== SOLID CARD (alternative to glass) ===== */
+.solid-card {
+  background: var(--surface-card);
+  border: 1px solid var(--ds-glass-border);
+  border-radius: var(--radius-lg);
+  transition: background 0.3s, border-color 0.3s;
+}
+
 .card-pad { padding: var(--space-lg); }
 .card-pad-lg { padding: var(--space-xl); }
 
@@ -858,7 +866,6 @@
   .bento-grid {
     gap: var(--space-sm);
   }
-}
 }
 
 /* ===== REDUCED MOTION ===== */

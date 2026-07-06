@@ -15,13 +15,12 @@ const {
   jsonLd,
 } = Astro.props;
 
-const siteTitle = "Pragma";
 const url = Astro.url.href;
 const siteUrl = Astro.url.origin;
 const ogImage = `${siteUrl}${image}`;
 ---
 
-<title set:html={siteTitle} />
+<title set:html={title} />
 <meta name="description" content={description} />
 <link rel="canonical" href={url} />
 
